@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>John Francis — Brand & Digital Designer</title>
+  <meta name="description" content="Senior Brand & Digital Designer based in Bangalore. Brand identity, campaign design, motion graphics, and digital experiences." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #ffffff;
+      --bg-2: #f5f4f2;
+      --bg-3: #eeede9;
+      --text: #111110;
+      --text-2: #6b6a66;
+      --text-3: #a09f9a;
+      --border: rgba(0,0,0,0.1);
+      --border-2: rgba(0,0,0,0.18);
+      --radius: 12px;
+      --radius-sm: 8px;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #111110;
+        --bg-2: #1a1a18;
+        --bg-3: #232320;
+        --text: #f0efe9;
+        --text-2: #8f8e89;
+        --text-3: #5a5955;
+        --border: rgba(255,255,255,0.1);
+        --border-2: rgba(255,255,255,0.18);
+      }
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      font-size: 16px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── NAV ── */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.4rem 2.5rem;
+      border-bottom: 0.5px solid var(--border);
+      position: sticky;
+      top: 0;
+      background: var(--bg);
+      z-index: 50;
+      backdrop-filter: blur(12px);
+    }
+
+    .logo {
+      font-family: 'DM Serif Display', serif;
+      font-size: 19px;
+      letter-spacing: -0.4px;
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    .logo em {
+      font-style: italic;
+      color: var(--text-2);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 13px;
+      color: var(--text-2);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--text); }
+
+    /* ── HERO ── */
+    .hero {
+      padding: 5rem 2.5rem 3.5rem;
+      max-width: 800px;
+    }
+
+    .hero-eyebrow {
+      font-size: 11px;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--text-3);
+      margin-bottom: 1.25rem;
+    }
+
+    .hero h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(42px, 6vw, 64px);
+      line-height: 1.08;
+      letter-spacing: -2px;
+      font-weight: 400;
+      margin-bottom: 1.25rem;
+    }
+
+    .hero h1 em {
+      font-style: italic;
+      color: var(--text-2);
+    }
+
+    .hero p {
+      font-size: 15px;
+      color: var(--text-2);
+      max-width: 460px;
+      line-height: 1.75;
+    }
+
+    /* ── SECTION HEADER ── */
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 2.5rem 1.5rem;
+      border-bottom: 0.5px solid var(--border);
+      margin-bottom: 0;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .section-label {
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--text-3);
+    }
+
+    .filters {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+
+    .filter-btn {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 12px;
+      padding: 5px 16px;
+      border-radius: 999px;
+      border: 0.5px solid var(--border-2);
+      background: transparent;
+      color: var(--text-2);
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+
+    .filter-btn.active,
+    .filter-btn:hover {
+      background: var(--text);
+      color: var(--bg);
+      border-color: var(--text);
+    }
+
+    /* ── GRID ── */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5px;
+      background: var(--border);
+    }
+
+    @media (max-width: 900px) {
+      .grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 560px) {
+      .grid { grid-template-columns: 1fr; }
+    }
+
+    /* ── CARD ── */
+    .card {
+      position: relative;
+      overflow: hidden;
+      aspect-ratio: 4 / 3;
+      cursor: pointer;
+      background: var(--bg-3);
+    }
+
+    .card-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+      display: block;
+      transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    .card:hover .card-img {
+      transform: scale(1.05);
+    }
+
+    .card-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(8,8,8,0.88) 0%, transparent 55%);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 1.5rem 1.75rem;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .card:hover .card-overlay { opacity: 1; }
+
+    .card-num {
+      position: absolute;
+      top: 1.1rem;
+      left: 1.4rem;
+      font-size: 11px;
+      color: rgba(255,255,255,0.35);
+      font-variant-numeric: tabular-nums;
+      z-index: 2;
+    }
+
+    .card-tag {
+      font-size: 10px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.55);
+      margin-bottom: 6px;
+    }
+
+    .card-title {
+      font-family: 'DM Serif Display', serif;
+      font-size: 24px;
+      color: #fff;
+      line-height: 1.15;
+      font-weight: 400;
+      margin-bottom: 12px;
+    }
+
+    .card-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 12px;
+      color: rgba(255,255,255,0.75);
+      background: rgba(255,255,255,0.12);
+      border: 0.5px solid rgba(255,255,255,0.2);
+      padding: 5px 14px;
+      border-radius: 999px;
+      width: fit-content;
+      transition: background 0.2s;
+    }
+
+    .card:hover .card-cta {
+      background: rgba(255,255,255,0.2);
+    }
+
+    /* ── MODAL BACKDROP ── */
+    .backdrop {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.65);
+      z-index: 200;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      backdrop-filter: blur(4px);
+    }
+
+    .backdrop.open { display: flex; }
+
+    /* ── MODAL ── */
+    .modal {
+      background: var(--bg);
+      border-radius: var(--radius);
+      width: 100%;
+      max-width: 860px;
+      max-height: 90vh;
+      overflow-y: auto;
+      border: 0.5px solid var(--border-2);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      position: relative;
+    }
+
+    @media (max-width: 640px) {
+      .modal { grid-template-columns: 1fr; }
+    }
+
+    .modal-media {
+      position: relative;
+      overflow: hidden;
+      border-radius: var(--radius) 0 0 var(--radius);
+      min-height: 320px;
+      background: var(--bg-3);
+    }
+
+    @media (max-width: 640px) {
+      .modal-media {
+        border-radius: var(--radius) var(--radius) 0 0;
+        min-height: 220px;
+      }
+    }
+
+    .modal-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top;
+      display: block;
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: rgba(0,0,0,0.35);
+      border: 0.5px solid rgba(255,255,255,0.2);
+      color: #fff;
+      font-size: 15px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 10;
+      transition: background 0.2s;
+      font-family: inherit;
+    }
+
+    .modal-close:hover { background: rgba(0,0,0,0.6); }
+
+    .modal-body {
+      padding: 2.5rem 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    .modal-tag {
+      font-size: 10px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--text-3);
+    }
+
+    .modal-title {
+      font-family: 'DM Serif Display', serif;
+      font-size: 32px;
+      font-weight: 400;
+      letter-spacing: -0.75px;
+      line-height: 1.15;
+    }
+
+    .modal-desc {
+      font-size: 14px;
+      line-height: 1.75;
+      color: var(--text-2);
+    }
+
+    .modal-meta {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+    }
+
+    .meta-item {
+      background: var(--bg-2);
+      border-radius: var(--radius-sm);
+      padding: 10px 14px;
+    }
+
+    .meta-label {
+      font-size: 10px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--text-3);
+      margin-bottom: 4px;
+    }
+
+    .meta-value {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--text);
+    }
+
+    .deliverables-label {
+      font-size: 10px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--text-3);
+      margin-bottom: 8px;
+    }
+
+    .deliverables {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .pill {
+      font-size: 11px;
+      padding: 4px 12px;
+      border-radius: 999px;
+      border: 0.5px solid var(--border-2);
+      color: var(--text-2);
+    }
+
+    .modal-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--text);
+      text-decoration: none;
+      border-bottom: 1px solid var(--border-2);
+      padding-bottom: 3px;
+      width: fit-content;
+      margin-top: auto;
+      transition: border-color 0.2s;
+    }
+
+    .modal-link:hover { border-color: var(--text); }
+
+    /* ── ABOUT ── */
+    .about {
+      padding: 5rem 2.5rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      border-top: 0.5px solid var(--border);
+    }
+
+    @media (max-width: 700px) {
+      .about { grid-template-columns: 1fr; gap: 2rem; }
+    }
+
+    .about-left h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 36px;
+      font-weight: 400;
+      letter-spacing: -1px;
+      line-height: 1.2;
+      margin-bottom: 1.25rem;
+    }
+
+    .about-left h2 em {
+      font-style: italic;
+      color: var(--text-2);
+    }
+
+    .about-left p {
+      font-size: 14px;
+      color: var(--text-2);
+      line-height: 1.8;
+      margin-bottom: 1rem;
+    }
+
+    .about-right {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .skill-group-label {
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--text-3);
+      margin-bottom: 0.6rem;
+    }
+
+    .skill-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .skill-tag {
+      font-size: 12px;
+      padding: 5px 12px;
+      border-radius: var(--radius-sm);
+      background: var(--bg-2);
+      color: var(--text-2);
+      border: 0.5px solid var(--border);
+    }
+
+    /* ── CONTACT ── */
+    .contact {
+      padding: 3rem 2.5rem 4rem;
+      border-top: 0.5px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+
+    .contact-left h3 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 28px;
+      font-weight: 400;
+      letter-spacing: -0.5px;
+      margin-bottom: 0.4rem;
+    }
+
+    .contact-left p {
+      font-size: 14px;
+      color: var(--text-2);
+    }
+
+    .contact-btn {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      padding: 12px 28px;
+      background: var(--text);
+      color: var(--bg);
+      border: none;
+      border-radius: 999px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: opacity 0.2s;
+      display: inline-block;
+    }
+
+    .contact-btn:hover { opacity: 0.8; }
+
+    /* ── FOOTER ── */
+    footer {
+      padding: 1.5rem 2.5rem;
+      border-top: 0.5px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+      color: var(--text-3);
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    /* ── UTILS ── */
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      clip: rect(0,0,0,0);
+    }
+
+    .hidden { display: none !important; }
+
+    ::selection {
+      background: var(--text);
+      color: var(--bg);
+    }
+
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: var(--bg); }
+    ::-webkit-scrollbar-thumb { background: var(--bg-3); border-radius: 3px; }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="#" class="logo">John <em>Francis</em></a>
+    <ul class="nav-links">
+      <li><a href="#work">Work</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <p class="hero-eyebrow">Senior Brand &amp; Digital Designer &nbsp;·&nbsp; Bangalore, India</p>
+    <h1>Brand thinking,<br><em>digital craft.</em></h1>
+    <p>I design brand identities, campaign systems, and digital experiences for tech companies — from AdTech platforms to campus networking startups.</p>
+  </section>
+
+  <!-- GRID HEADER -->
+  <div id="work" class="section-header">
+    <span class="section-label">Selected work &mdash; 5 projects</span>
+    <div class="filters">
+      <button class="filter-btn active" onclick="filter('all', this)">All</button>
+      <button class="filter-btn" onclick="filter('brand', this)">Brand</button>
+      <button class="filter-btn" onclick="filter('digital', this)">Digital</button>
+      <button class="filter-btn" onclick="filter('campaign', this)">Campaign</button>
+    </div>
+  </div>
+
+  <!-- PROJECT GRID -->
+  <!--
+    HOW TO ADD YOUR OWN IMAGES:
+    Replace each src="images/epsilon.jpg" with the path to your exported Figma cover.
+    Recommended export: 1200 × 900 px, JPG 85% quality.
+    Place all images in an /images/ folder next to this HTML file.
+  -->
+  <section class="grid">
+
+    <article class="card" data-tags="digital campaign" onclick="openModal(0)" tabindex="0" onkeydown="if(event.key==='Enter')openModal(0)">
+      <span class="card-num">01</span>
+      <!-- Replace src below with your Epsilon cover image -->
+      <img class="card-img" src="images/epsilon.jpg" alt="Epsilon project preview" onerror="this.src='https://placehold.co/600x450/1A298E/C8D8FF?text=Epsilon'" />
+      <div class="card-overlay">
+        <div class="card-tag">AdTech &middot; Campaign</div>
+        <div class="card-title">Epsilon</div>
+        <div class="card-cta">View case study &rarr;</div>
+      </div>
+    </article>
+
+    <article class="card" data-tags="digital campaign brand" onclick="openModal(1)" tabindex="0" onkeydown="if(event.key==='Enter')openModal(1)">
+      <span class="card-num">02</span>
+      <!-- Replace src below with your Nile cover image -->
+      <img class="card-img" src="images/nile.jpg" alt="Nile Secure project preview" onerror="this.src='https://placehold.co/600x450/050510/FF3CA0?text=Nile+Secure'" />
+      <div class="card-overlay">
+        <div class="card-tag">NaaS &middot; Digital</div>
+        <div class="card-title">Nile Secure</div>
+        <div class="card-cta">View case study &rarr;</div>
+      </div>
+    </article>
+
+    <article class="card" data-tags="brand" onclick="openModal(2)" tabindex="0" onkeydown="if(event.key==='Enter')openModal(2)">
+      <span class="card-num">03</span>
+      <!-- Replace src below with your Semi-Cab cover image -->
+      <img class="card-img" src="images/semicab.jpg" alt="Semi-Cab project preview" onerror="this.src='https://placehold.co/600x450/141414/FF5500?text=Semi-Cab'" />
+      <div class="card-overlay">
+        <div class="card-tag">Logistics &middot; Brand Identity</div>
+        <div class="card-title">Semi-Cab</div>
+        <div class="card-cta">View case study &rarr;</div>
+      </div>
+    </article>
+
+    <article class="card" data-tags="brand digital" onclick="openModal(3)" tabindex="0" onkeydown="if(event.key==='Enter')openModal(3)">
+      <span class="card-num">04</span>
+      <!-- Replace src below with your Sensecloud cover image -->
+      <img class="card-img" src="images/sensecloud.jpg" alt="Sensecloud project preview" onerror="this.src='https://placehold.co/600x450/F0EDE8/E24B4A?text=Sensecloud'" />
+      <div class="card-overlay">
+        <div class="card-tag">SaaS &middot; Branding</div>
+        <div class="card-title">Sensecloud</div>
+        <div class="card-cta">View case study &rarr;</div>
+      </div>
+    </article>
+
+    <article class="card" data-tags="digital campaign" onclick="openModal(4)" tabindex="0" onkeydown="if(event.key==='Enter')openModal(4)">
+      <span class="card-num">05</span>
+      <!-- Replace src below with your Insider cover image -->
+      <img class="card-img" src="images/insider.jpg" alt="Insider project preview" onerror="this.src='https://placehold.co/600x450/F5EDE4/D85A30?text=Insider'" />
+      <div class="card-overlay">
+        <div class="card-tag">Beauty &middot; Editorial</div>
+        <div class="card-title">Insider</div>
+        <div class="card-cta">View case study &rarr;</div>
+      </div>
+    </article>
+
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="about">
+    <div class="about-left">
+      <h2>Design that moves<br><em>brands forward.</em></h2>
+      <p>I'm John Francis, a Senior Brand &amp; Digital Designer based in Bangalore with a decade of experience across brand identity, campaign design, motion graphics, AI-generated video, and interactive digital design.</p>
+      <p>My work spans early-stage startups to established enterprise platforms — always anchored in clear strategy and sharp visual execution.</p>
+    </div>
+    <div class="about-right">
+      <div>
+        <p class="skill-group-label">Brand &amp; Identity</p>
+        <div class="skill-tags">
+          <span class="skill-tag">Brand Identity</span>
+          <span class="skill-tag">Visual Systems</span>
+          <span class="skill-tag">Logo Design</span>
+          <span class="skill-tag">Typography</span>
+          <span class="skill-tag">Colour Strategy</span>
+        </div>
+      </div>
+      <div>
+        <p class="skill-group-label">Digital &amp; Campaign</p>
+        <div class="skill-tags">
+          <span class="skill-tag">Landing Pages</span>
+          <span class="skill-tag">Display Ads</span>
+          <span class="skill-tag">Email Design</span>
+          <span class="skill-tag">LinkedIn Creative</span>
+          <span class="skill-tag">Editorial Layout</span>
+        </div>
+      </div>
+      <div>
+        <p class="skill-group-label">Motion &amp; AI</p>
+        <div class="skill-tags">
+          <span class="skill-tag">Motion Graphics</span>
+          <span class="skill-tag">AI Video Production</span>
+          <span class="skill-tag">Higgsfield AI</span>
+          <span class="skill-tag">Runway ML</span>
+          <span class="skill-tag">Midjourney</span>
+        </div>
+      </div>
+      <div>
+        <p class="skill-group-label">Tools</p>
+        <div class="skill-tags">
+          <span class="skill-tag">Figma</span>
+          <span class="skill-tag">After Effects</span>
+          <span class="skill-tag">Illustrator</span>
+          <span class="skill-tag">Photoshop</span>
+          <span class="skill-tag">Canva</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact">
+    <div class="contact-left">
+      <h3>Let's work together</h3>
+      <p>Open to freelance projects, full-time roles, and creative collaborations.</p>
+    </div>
+    <!-- Replace with your actual email address -->
+    <a class="contact-btn" href="mailto:johnfrancisa548@gmail.com">Get in touch &rarr;</a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <span>&copy; 2025 John Francis</span>
+    <span>Bangalore, India</span>
+  </footer>
+
+  <!-- MODAL -->
+  <div class="backdrop" id="backdrop" onclick="handleBackdropClick(event)" role="dialog" aria-modal="true" aria-labelledby="modal-title-el">
+    <div class="modal" id="modal">
+      <div class="modal-media">
+        <button class="modal-close" onclick="closeModal()" aria-label="Close modal">&#x2715;</button>
+        <img id="modal-img" src="" alt="" />
+      </div>
+      <div class="modal-body">
+        <div class="modal-tag" id="modal-tag-el"></div>
+        <div class="modal-title" id="modal-title-el"></div>
+        <div class="modal-desc" id="modal-desc-el"></div>
+        <div class="modal-meta" id="modal-meta-el"></div>
+        <div>
+          <p class="deliverables-label">Deliverables</p>
+          <div class="deliverables" id="modal-del-el"></div>
+        </div>
+        <a class="modal-link" id="modal-link-el" href="#" target="_blank" rel="noopener">Open in Figma &rarr;</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const PROJECTS = [
+      {
+        tag: "AdTech · Campaign Design",
+        title: "Epsilon",
+        desc: "A multi-deliverable creative brief for Epsilon's MarTech platform — spanning hackathon visual identity (TeXpedition '26), L&D email template redesign, and campaign analysis. Designed to strict brand guidelines with Avenir Next typography, Electric Blue and Navy palette, and a hand-drawn icon system.",
+        role: "Senior Designer",
+        client: "Epsilon",
+        year: "2024–25",
+        type: "Freelance Brief",
+        deliverables: ["Hackathon Identity", "Email Templates", "Campaign Analysis", "Brand Guidelines", "Figma Export"],
+        link: "https://www.figma.com/design/akzUgiQK9Lr9tTMn853bn8/Epsilon",
+        img: "images/epsilon.jpg",
+        fallback: "https://placehold.co/600x900/1A298E/C8D8FF?text=Epsilon"
+      },
+      {
+        tag: "NaaS · Digital & Campaign",
+        title: "Nile Secure",
+        desc: "Full creative suite for a campus networking startup — landing page, HTML display ads, LinkedIn carousel, and a LinkedIn video ad. Visual direction moved from dark cinematic to isometric wireframe with hair-thin Nile Blue lines and near-white backgrounds. Prepared strategically for a senior design interview.",
+        role: "Senior Designer",
+        client: "Nile Secure",
+        year: "2024–25",
+        type: "Freelance Brief",
+        deliverables: ["Landing Page", "Display Ads (3 sizes)", "LinkedIn Carousel", "Video Ad", "Brand Audit"],
+        link: "https://www.figma.com/design/ImrEkxmRxcPjUyuxsit5FT/Nile",
+        img: "images/nile.jpg",
+        fallback: "https://placehold.co/600x900/050510/FF3CA0?text=Nile+Secure"
+      },
+      {
+        tag: "Logistics · Brand Identity",
+        title: "Semi-Cab",
+        desc: "Bold brand identity for a logistics and trucking platform. A strong orange and black palette paired with a confident typographic system — built for scale across mobile app UI, product design, and brand stationery. Includes complete visual language and motion guidelines.",
+        role: "Brand Designer",
+        client: "Semi-Cab",
+        year: "2024",
+        type: "Brand Project",
+        deliverables: ["Logo & Identity", "App UI", "Brand Stationery", "Motion Guidelines", "Product Design"],
+        link: "https://www.figma.com/design/bxric3w0RPjrtAxn7NHTjm/Semi-Cab",
+        img: "images/semicab.jpg",
+        fallback: "https://placehold.co/600x900/141414/FF5500?text=Semi-Cab"
+      },
+      {
+        tag: "SaaS · Brand & Digital",
+        title: "Sensecloud",
+        desc: "Diverse creative work across a SaaS ecosystem — product branding for PackPal, editorial campaign concepts, dashboard UI explorations, and brand identity development. Strong use of bold typography, high-contrast colour systems, and expressive layout.",
+        role: "Brand & Digital Designer",
+        client: "Sensecloud",
+        year: "2024",
+        type: "Brand Project",
+        deliverables: ["Product Branding", "Editorial Design", "Dashboard UI", "Brand Concepts", "Campaign Creative"],
+        link: "https://www.figma.com/design/vtWSmOrVz3SA2iAHHGQDVM/Sensecloud",
+        img: "images/sensecloud.jpg",
+        fallback: "https://placehold.co/600x900/F0EDE8/E24B4A?text=Sensecloud"
+      },
+      {
+        tag: "Beauty & Retail · Editorial",
+        title: "Insider",
+        desc: "An in-depth digital growth guide for the beauty and cosmetics vertical — combining editorial layout, lifestyle photography art direction, and data visualisation. Designed for brand marketers driving customer acquisition and retention through Insider's personalisation platform.",
+        role: "Digital Designer",
+        client: "Insider",
+        year: "2024",
+        type: "Editorial Campaign",
+        deliverables: ["Editorial Layout", "Data Visualisation", "Photography Direction", "Digital Guide", "Brand Assets"],
+        link: "https://www.figma.com/design/vo7yRP7IRssLmg9ReF9C40/Insider",
+        img: "images/insider.jpg",
+        fallback: "https://placehold.co/600x900/F5EDE4/D85A30?text=Insider"
+      }
+    ];
+
+    function openModal(i) {
+      const p = PROJECTS[i];
+      document.getElementById('modal-tag-el').textContent = p.tag;
+      document.getElementById('modal-title-el').textContent = p.title;
+      document.getElementById('modal-desc-el').textContent = p.desc;
+      document.getElementById('modal-link-el').href = p.link;
+
+      const img = document.getElementById('modal-img');
+      img.src = p.img;
+      img.alt = p.title + ' project preview';
+      img.onerror = function() { this.src = p.fallback; };
+
+      const meta = document.getElementById('modal-meta-el');
+      meta.innerHTML = [
+        ['Role', p.role],
+        ['Client', p.client],
+        ['Year', p.year],
+        ['Type', p.type]
+      ].map(([l, v]) =>
+        `<div class="meta-item"><div class="meta-label">${l}</div><div class="meta-value">${v}</div></div>`
+      ).join('');
+
+      document.getElementById('modal-del-el').innerHTML =
+        p.deliverables.map(d => `<span class="pill">${d}</span>`).join('');
+
+      document.getElementById('backdrop').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+      document.getElementById('backdrop').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    function handleBackdropClick(e) {
+      if (e.target === document.getElementById('backdrop')) closeModal();
+    }
+
+    function filter(type, btn) {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      document.querySelectorAll('.card').forEach(card => {
+        const tags = card.dataset.tags || '';
+        card.classList.toggle('hidden', type !== 'all' && !tags.includes(type));
+      });
+    }
+
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') closeModal();
+    });
+  </script>
+</body>
+</html>
