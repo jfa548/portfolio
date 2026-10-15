@@ -599,7 +599,7 @@
 
   <!-- GRID HEADER -->
   <div id="work" class="section-header">
-    <span class="section-label">Selected work &mdash; 8 projects</span>
+    <span class="section-label">Selected work &mdash; 9 projects</span>
     <div class="filters">
       <button class="filter-btn active" onclick="filter('all', this)">All</button>
       <button class="filter-btn" onclick="filter('brand', this)">Brand</button>
@@ -698,6 +698,16 @@
       <div class="card-overlay">
         <div class="card-tag">B2B SaaS &middot; Paid Social</div>
         <div class="card-title">Coefficient</div>
+        <div class="card-cta">View case study &rarr;</div>
+      </div>
+    </article>
+
+    <article class="card" data-tags="brand" onclick="openModal(8)" tabindex="0" onkeydown="if(event.key==='Enter')openModal(8)">
+      <span class="card-num">09</span>
+      <img class="card-img" src="images/gathers.jpg" alt="Gathers project preview" onerror="this.src='https://placehold.co/600x450/14213D/F2A74B?text=Gathers'" />
+      <div class="card-overlay">
+        <div class="card-tag">Events &middot; Merchandise</div>
+        <div class="card-title">Gathers</div>
         <div class="card-cta">View case study &rarr;</div>
       </div>
     </article>
@@ -906,6 +916,20 @@
         img: "images/coefficient.jpg",
         modalImg: "images/coefficient-modal.jpg",
         fallback: "https://placehold.co/600x900/101418/36C98A?text=Coefficient"
+      },
+      {
+        tag: "Events · Merchandise",
+        title: "Gathers",
+        desc: "Custom patch bar for Narvar's presence at the Gathers event in San Diego. A two-step on-site experience: guests picked one of four Narvar logo patches, then chose from seven San Diego city designs — stamps, a retro badge and a script lockup — applied live to their jacket or bag, with signage to match.",
+        role: "Brand & Event Designer",
+        client: "Narvar",
+        year: "2025",
+        type: "Event Merchandise",
+        deliverables: ["Narvar Patches", "San Diego Patches", "Patch Bar Signage", "Event Branding", "On-site Experience"],
+        link: "https://www.figma.com/design/qP4EXsd2eEr5gu1nuJX0ZA/2025---Event---Gathers-SD-India",
+        img: "images/gathers.jpg",
+        modalImg: "images/gathers-modal.jpg",
+        fallback: "https://placehold.co/600x900/14213D/F2A74B?text=Gathers"
       }
     ];
 
