@@ -595,7 +595,7 @@
 
   <!-- GRID HEADER -->
   <div id="work" class="section-header">
-    <span class="section-label">Selected work &mdash; 5 projects</span>
+    <span class="section-label">Selected work &mdash; 6 projects</span>
     <div class="filters">
       <button class="filter-btn active" onclick="filter('all', this)">All</button>
       <button class="filter-btn" onclick="filter('brand', this)">Brand</button>
@@ -664,6 +664,16 @@
       <div class="card-overlay">
         <div class="card-tag">Beauty &middot; Editorial</div>
         <div class="card-title">Insider</div>
+        <div class="card-cta">View case study &rarr;</div>
+      </div>
+    </article>
+
+    <article class="card" data-tags="brand campaign" onclick="openModal(5)" tabindex="0" onkeydown="if(event.key==='Enter')openModal(5)">
+      <span class="card-num">06</span>
+      <img class="card-img" src="images/bcc26.jpg" alt="BCC'26 project preview" onerror="this.src='https://placehold.co/600x450/2E7D4F/FFFFFF?text=BCC26'" />
+      <div class="card-overlay">
+        <div class="card-tag">Events &middot; Brand Campaign</div>
+        <div class="card-title">BCC&rsquo;26</div>
         <div class="card-cta">View case study &rarr;</div>
       </div>
     </article>
@@ -824,6 +834,21 @@
         link: "https://www.figma.com/design/vo7yRP7IRssLmg9ReF9C40/Insider",
         img: "images/insider.jpg",
         fallback: "https://placehold.co/600x900/F5EDE4/D85A30?text=Insider"
+      },
+      {
+        tag: "Events · Brand Campaign",
+        title: "BCC’26",
+        desc: "Poster concept showcase for the Bangalore Craft Beer Crawl 2026 — a 30-day, 15-brewery, 8-city campaign. Starting from a moodboard of international beer-festival posters, the work explores illustrated, retro-print, hand-drawn crowd and chrome-type directions, with Bangalore landmarks, autos and bunting, and bilingual English and Kannada lockups. It lands on a two-colour hero poster built around a raised glass.",
+        role: "Brand Designer",
+        client: "Bangalore Craft Beer Crawl",
+        year: "2026",
+        type: "Concept Showcase",
+        deliverables: ["Poster Concepts", "Moodboard", "Illustration Direction", "Bilingual Typography", "Final Poster"],
+        link: "projects/bcc26-poster-concepts.pdf",
+        linkLabel: "View PDF",
+        img: "images/bcc26.jpg",
+        modalImg: "images/bcc26-poster.jpg",
+        fallback: "https://placehold.co/600x900/2E7D4F/FFFFFF?text=BCC26"
       }
     ];
 
@@ -832,10 +857,12 @@
       document.getElementById('modal-tag-el').textContent = p.tag;
       document.getElementById('modal-title-el').textContent = p.title;
       document.getElementById('modal-desc-el').textContent = p.desc;
-      document.getElementById('modal-link-el').href = p.link;
+      const linkEl = document.getElementById('modal-link-el');
+      linkEl.href = p.link;
+      linkEl.textContent = (p.linkLabel || 'Open in Figma') + ' →';
 
       const img = document.getElementById('modal-img');
-      img.src = p.img;
+      img.src = p.modalImg || p.img;
       img.alt = p.title + ' project preview';
       img.onerror = function() { this.src = p.fallback; };
 
