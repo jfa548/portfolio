@@ -599,7 +599,7 @@
 
   <!-- GRID HEADER -->
   <div id="work" class="section-header">
-    <span class="section-label">Selected work &mdash; 6 projects</span>
+    <span class="section-label">Selected work &mdash; 8 projects</span>
     <div class="filters">
       <button class="filter-btn active" onclick="filter('all', this)">All</button>
       <button class="filter-btn" onclick="filter('brand', this)">Brand</button>
@@ -678,6 +678,26 @@
       <div class="card-overlay">
         <div class="card-tag">Events &middot; Brand Campaign</div>
         <div class="card-title">BCC&rsquo;26</div>
+        <div class="card-cta">View case study &rarr;</div>
+      </div>
+    </article>
+
+    <article class="card" data-tags="digital" onclick="openModal(6)" tabindex="0" onkeydown="if(event.key==='Enter')openModal(6)">
+      <span class="card-num">07</span>
+      <img class="card-img" src="images/narvar.jpg" alt="Narvar project preview" onerror="this.src='https://placehold.co/600x450/0A1A3F/6FA8FF?text=Narvar'" />
+      <div class="card-overlay">
+        <div class="card-tag">Ecommerce &middot; Website</div>
+        <div class="card-title">Narvar</div>
+        <div class="card-cta">View case study &rarr;</div>
+      </div>
+    </article>
+
+    <article class="card" data-tags="digital campaign" onclick="openModal(7)" tabindex="0" onkeydown="if(event.key==='Enter')openModal(7)">
+      <span class="card-num">08</span>
+      <img class="card-img" src="images/coefficient.jpg" alt="Coefficient project preview" onerror="this.src='https://placehold.co/600x450/101418/36C98A?text=Coefficient'" />
+      <div class="card-overlay">
+        <div class="card-tag">B2B SaaS &middot; Paid Social</div>
+        <div class="card-title">Coefficient</div>
         <div class="card-cta">View case study &rarr;</div>
       </div>
     </article>
@@ -785,6 +805,7 @@
         deliverables: ["Hackathon Identity", "Email Templates", "Campaign Analysis", "Brand Guidelines", "Figma Export"],
         link: "https://www.figma.com/design/akzUgiQK9Lr9tTMn853bn8/Epsilon",
         img: "images/epsilon.jpg",
+        modalImg: "images/epsilon-modal.jpg",
         fallback: "https://placehold.co/600x900/1A298E/C8D8FF?text=Epsilon"
       },
       {
@@ -798,6 +819,7 @@
         deliverables: ["Landing Page", "Display Ads (3 sizes)", "LinkedIn Carousel", "Video Ad", "Brand Audit"],
         link: "https://www.figma.com/design/ImrEkxmRxcPjUyuxsit5FT/Nile",
         img: "images/nile.jpg",
+        modalImg: "images/nile-modal.jpg",
         fallback: "https://placehold.co/600x900/050510/FF3CA0?text=Nile+Secure"
       },
       {
@@ -811,6 +833,7 @@
         deliverables: ["Logo & Identity", "App UI", "Brand Stationery", "Motion Guidelines", "Product Design"],
         link: "https://www.figma.com/design/bxric3w0RPjrtAxn7NHTjm/Semi-Cab",
         img: "images/semicab.jpg",
+        modalImg: "images/semicab-modal.jpg",
         fallback: "https://placehold.co/600x900/141414/FF5500?text=Semi-Cab"
       },
       {
@@ -824,6 +847,7 @@
         deliverables: ["Product Branding", "Editorial Design", "Dashboard UI", "Brand Concepts", "Campaign Creative"],
         link: "https://www.figma.com/design/vtWSmOrVz3SA2iAHHGQDVM/Sensecloud",
         img: "images/sensecloud.jpg",
+        modalImg: "images/sensecloud-modal.jpg",
         fallback: "https://placehold.co/600x900/F0EDE8/E24B4A?text=Sensecloud"
       },
       {
@@ -854,6 +878,34 @@
         img: "images/bcc26.jpg",
         modalImg: "images/bcc26-poster.jpg",
         fallback: "https://placehold.co/600x900/2E7D4F/FFFFFF?text=BCC26"
+      },
+      {
+        tag: "Ecommerce · Website Redesign",
+        title: "Narvar",
+        desc: "Homepage redesign for Narvar's post-purchase platform. An AI-led hero built around intelligent personalisation leads into a radial platform diagram, a retail logo wall, and a retailer proof section with stats and testimonials — a dark, enterprise-grade visual system carried end to end.",
+        role: "Senior Designer",
+        client: "Narvar",
+        year: "2024–25",
+        type: "Website Redesign",
+        deliverables: ["Homepage Design", "Hero & Platform Diagram", "Stats Module", "Testimonials Grid", "Responsive Layout"],
+        link: "https://www.figma.com/design/eybUNE1qSa9kAVjgjqmXBB/Narvar-Homepage-Redesign",
+        img: "images/narvar.jpg",
+        modalImg: "images/narvar-modal.jpg",
+        fallback: "https://placehold.co/600x900/0A1A3F/6FA8FF?text=Narvar"
+      },
+      {
+        tag: "B2B SaaS · Paid Social",
+        title: "Coefficient",
+        desc: "“Close the Gap” ad campaign for Coefficient's live-data connector. A torn spreadsheet set against live dashboards dramatises the gap between stale Monday exports and real-time numbers, carried across paid social, display, and story formats.",
+        role: "Designer",
+        client: "Coefficient",
+        year: "2024",
+        type: "Paid Social Campaign",
+        deliverables: ["Paid Social Ads", "Display Banners", "Story Formats", "Campaign Concept", "Ad System"],
+        link: "https://www.figma.com/design/iFGV4jFNZKC27jmWkzBWIY/Coefficient",
+        img: "images/coefficient.jpg",
+        modalImg: "images/coefficient-modal.jpg",
+        fallback: "https://placehold.co/600x900/101418/36C98A?text=Coefficient"
       }
     ];
 
