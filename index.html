@@ -4,7 +4,17 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>John Francis — Brand & Digital Designer</title>
-  <meta name="description" content="Senior Brand & Digital Designer based in Bangalore. Brand identity, campaign design, motion graphics, and digital experiences." />
+  <meta name="description" content="Brand & Digital Designer with 9+ years across B2B SaaS and enterprise tech — Narvar, Microsoft, Thoughtworks, Cisco and now Ascendion. Brand identity, campaign systems, and digital experiences." />
+  <link rel="canonical" href="https://jfa.design/" />
+  <meta property="og:title" content="John Francis — Brand & Digital Designer" />
+  <meta property="og:description" content="9+ years designing brand identities, campaign systems and digital experiences for tech companies — Narvar, Microsoft, Thoughtworks, Cisco, Ascendion." />
+  <meta property="og:image" content="https://jfa.design/images/og.jpg" />
+  <meta property="og:url" content="https://jfa.design/" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="John Francis — Brand & Digital Designer" />
+  <meta name="twitter:description" content="Brand identity, campaign systems and digital experiences for tech companies." />
+  <meta name="twitter:image" content="https://jfa.design/images/og.jpg" />
   <script>
     window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
   </script>
@@ -557,6 +567,108 @@
       gap: 0.5rem;
     }
 
+    /* ── HERO CTA + AVAILABILITY ── */
+    .hero-cta {
+      display: flex;
+      gap: 10px;
+      margin-top: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary, .btn-ghost {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      padding: 11px 24px;
+      border-radius: 999px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      transition: all 0.2s;
+    }
+
+    .btn-primary { background: var(--text); color: var(--bg); border: 0.5px solid var(--text); }
+    .btn-primary:hover { opacity: 0.85; }
+    .btn-ghost { background: transparent; color: var(--text); border: 0.5px solid var(--border-2); }
+    .btn-ghost:hover { border-color: var(--text); }
+
+    .availability {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      color: var(--text-2);
+      margin-top: 1.75rem;
+    }
+
+    .avail-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #35c466;
+      box-shadow: 0 0 0 3px rgba(53,196,102,0.18);
+    }
+
+    /* ── CLIENT STRIP ── */
+    .clients {
+      padding: 1.5rem 2.5rem 2.75rem;
+      border-top: 0.5px solid var(--border);
+    }
+
+    .clients-label {
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--text-3);
+      margin-bottom: 1rem;
+    }
+
+    .clients-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 1.25rem 2.5rem;
+    }
+
+    .client-name {
+      font-family: 'DM Serif Display', serif;
+      font-size: 20px;
+      color: var(--text-2);
+      letter-spacing: -0.3px;
+      opacity: 0.7;
+      transition: opacity 0.2s, color 0.2s;
+    }
+
+    .client-name:hover { opacity: 1; color: var(--text); }
+
+    /* ── FEATURED GRID ── */
+    .grid-feat { grid-template-columns: 1fr 1fr; }
+    .grid-feat .card { aspect-ratio: 16 / 10; }
+
+    @media (max-width: 760px) {
+      .grid-feat { grid-template-columns: 1fr; }
+    }
+
+    /* card-as-link */
+    a.card { text-decoration: none; color: inherit; display: block; }
+    .card-feat-badge {
+      position: absolute;
+      top: 1.1rem;
+      right: 1.4rem;
+      font-size: 9px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.7);
+      background: rgba(0,0,0,0.3);
+      border: 0.5px solid rgba(255,255,255,0.2);
+      padding: 4px 9px;
+      border-radius: 999px;
+      z-index: 2;
+      backdrop-filter: blur(4px);
+    }
+
     /* ── UTILS ── */
     .sr-only {
       position: absolute;
@@ -592,9 +704,29 @@
 
   <!-- HERO -->
   <section class="hero">
-    <p class="hero-eyebrow">Senior Brand &amp; Digital Designer &nbsp;·&nbsp; Bangalore, India</p>
+    <p class="hero-eyebrow">Brand &amp; Digital Designer &nbsp;·&nbsp; Bangalore, India</p>
     <h1>Brand thinking,<br><em>digital craft.</em></h1>
-    <p>I design brand identities, campaign systems, and digital experiences for tech companies — from AdTech platforms to campus networking startups.</p>
+    <p>I design brand identities, campaign systems, and digital experiences for tech companies — with 9+ years across B2B SaaS and enterprise, from Narvar and Microsoft to Thoughtworks, Cisco and now Ascendion.</p>
+    <div class="hero-cta">
+      <a href="#work" class="btn-primary">View work &darr;</a>
+      <a href="mailto:johnfrancisa548@gmail.com" class="btn-ghost">Get in touch</a>
+    </div>
+    <div class="availability"><span class="avail-dot"></span> Open to select freelance projects &amp; collaborations</div>
+  </section>
+
+  <!-- CLIENT STRIP -->
+  <section class="clients">
+    <p class="clients-label">Selected clients &amp; teams</p>
+    <div class="clients-row">
+      <span class="client-name">Narvar</span>
+      <span class="client-name">Microsoft</span>
+      <span class="client-name">Thoughtworks</span>
+      <span class="client-name">Cisco</span>
+      <span class="client-name">Ascendion</span>
+      <span class="client-name">Insider</span>
+      <span class="client-name">Coefficient</span>
+      <span class="client-name">Sahaj</span>
+    </div>
   </section>
 
   <!-- GRID HEADER -->
@@ -608,109 +740,105 @@
     </div>
   </div>
 
-  <!-- PROJECT GRID -->
-  <!--
-    HOW TO ADD YOUR OWN IMAGES:
-    Replace each src="images/epsilon.jpg" with the path to your exported Figma cover.
-    Recommended export: 1200 × 900 px, JPG 85% quality.
-    Place all images in an /images/ folder next to this HTML file.
-  -->
-  <section class="grid">
+  <!-- FEATURED PROJECTS -->
+  <section class="grid grid-feat">
 
-    <article class="card" data-tags="digital campaign" onclick="openModal(0)" tabindex="0" onkeydown="if(event.key==='Enter')openModal(0)">
+    <a class="card featured" href="work/narvar.html" data-tags="digital" aria-label="Narvar case study">
       <span class="card-num">01</span>
-      <!-- Replace src below with your Epsilon cover image -->
-      <img class="card-img" src="images/epsilon.jpg" alt="Epsilon project preview" onerror="this.src='https://placehold.co/600x450/1A298E/C8D8FF?text=Epsilon'" />
-      <div class="card-overlay">
-        <div class="card-tag">AdTech &middot; Campaign</div>
-        <div class="card-title">Epsilon</div>
-        <div class="card-cta">View case study &rarr;</div>
-      </div>
-    </article>
-
-    <article class="card" data-tags="digital campaign brand" onclick="openModal(1)" tabindex="0" onkeydown="if(event.key==='Enter')openModal(1)">
-      <span class="card-num">02</span>
-      <!-- Replace src below with your Nile cover image -->
-      <img class="card-img" src="images/nile.jpg" alt="Nile Secure project preview" onerror="this.src='https://placehold.co/600x450/050510/FF3CA0?text=Nile+Secure'" />
-      <div class="card-overlay">
-        <div class="card-tag">NaaS &middot; Digital</div>
-        <div class="card-title">Nile Secure</div>
-        <div class="card-cta">View case study &rarr;</div>
-      </div>
-    </article>
-
-    <article class="card" data-tags="brand" onclick="openModal(2)" tabindex="0" onkeydown="if(event.key==='Enter')openModal(2)">
-      <span class="card-num">03</span>
-      <!-- Replace src below with your Semi-Cab cover image -->
-      <img class="card-img" src="images/semicab.jpg" alt="Semi-Cab project preview" onerror="this.src='https://placehold.co/600x450/141414/FF5500?text=Semi-Cab'" />
-      <div class="card-overlay">
-        <div class="card-tag">Logistics &middot; Brand Identity</div>
-        <div class="card-title">Semi-Cab</div>
-        <div class="card-cta">View case study &rarr;</div>
-      </div>
-    </article>
-
-    <article class="card" data-tags="brand digital" onclick="openModal(3)" tabindex="0" onkeydown="if(event.key==='Enter')openModal(3)">
-      <span class="card-num">04</span>
-      <!-- Replace src below with your Sensecloud cover image -->
-      <img class="card-img" src="images/sensecloud.jpg" alt="Sensecloud project preview" onerror="this.src='https://placehold.co/600x450/F0EDE8/E24B4A?text=Sensecloud'" />
-      <div class="card-overlay">
-        <div class="card-tag">SaaS &middot; Branding</div>
-        <div class="card-title">Sensecloud</div>
-        <div class="card-cta">View case study &rarr;</div>
-      </div>
-    </article>
-
-    <article class="card" data-tags="digital campaign" onclick="openModal(4)" tabindex="0" onkeydown="if(event.key==='Enter')openModal(4)">
-      <span class="card-num">05</span>
-      <!-- Replace src below with your Insider cover image -->
-      <img class="card-img" src="images/insider.jpg" alt="Insider project preview" onerror="this.src='https://placehold.co/600x450/F5EDE4/D85A30?text=Insider'" />
-      <div class="card-overlay">
-        <div class="card-tag">Beauty &middot; Editorial</div>
-        <div class="card-title">Insider</div>
-        <div class="card-cta">View case study &rarr;</div>
-      </div>
-    </article>
-
-    <article class="card" data-tags="brand campaign" onclick="openModal(5)" tabindex="0" onkeydown="if(event.key==='Enter')openModal(5)">
-      <span class="card-num">06</span>
-      <img class="card-img" src="images/bcc26.jpg" alt="BCC'26 project preview" onerror="this.src='https://placehold.co/600x450/2E7D4F/FFFFFF?text=BCC26'" />
-      <div class="card-overlay">
-        <div class="card-tag">Events &middot; Brand Campaign</div>
-        <div class="card-title">BCC&rsquo;26</div>
-        <div class="card-cta">View case study &rarr;</div>
-      </div>
-    </article>
-
-    <article class="card" data-tags="digital" onclick="openModal(6)" tabindex="0" onkeydown="if(event.key==='Enter')openModal(6)">
-      <span class="card-num">07</span>
-      <img class="card-img" src="images/narvar.jpg" alt="Narvar project preview" onerror="this.src='https://placehold.co/600x450/0A1A3F/6FA8FF?text=Narvar'" />
+      <span class="card-feat-badge">Featured</span>
+      <img class="card-img" src="images/narvar.jpg" width="1200" height="900" alt="Narvar — project cover" onerror="this.src='https://placehold.co/600x450/0A1A3F/6FA8FF?text=Narvar'" />
       <div class="card-overlay">
         <div class="card-tag">Ecommerce &middot; Website</div>
         <div class="card-title">Narvar</div>
         <div class="card-cta">View case study &rarr;</div>
       </div>
-    </article>
+    </a>
 
-    <article class="card" data-tags="digital campaign" onclick="openModal(7)" tabindex="0" onkeydown="if(event.key==='Enter')openModal(7)">
-      <span class="card-num">08</span>
-      <img class="card-img" src="images/coefficient.jpg" alt="Coefficient project preview" onerror="this.src='https://placehold.co/600x450/101418/36C98A?text=Coefficient'" />
+    <a class="card featured" href="work/insider.html" data-tags="digital campaign" aria-label="Insider case study">
+      <span class="card-num">02</span>
+      <span class="card-feat-badge">Featured</span>
+      <img class="card-img" src="images/insider.jpg" width="1200" height="900" alt="Insider — project cover" onerror="this.src='https://placehold.co/600x450/F5EDE4/D85A30?text=Insider'" />
+      <div class="card-overlay">
+        <div class="card-tag">Beauty &middot; Editorial</div>
+        <div class="card-title">Insider</div>
+        <div class="card-cta">View case study &rarr;</div>
+      </div>
+    </a>
+
+  </section>
+
+  <!-- PROJECT GRID -->
+  <section class="grid">
+
+    <a class="card" href="work/coefficient.html" data-tags="digital campaign" aria-label="Coefficient case study">
+      <span class="card-num">03</span>
+      <img class="card-img" loading="lazy" src="images/coefficient.jpg" width="1200" height="900" alt="Coefficient — project cover" onerror="this.src='https://placehold.co/600x450/101418/36C98A?text=Coefficient'" />
       <div class="card-overlay">
         <div class="card-tag">B2B SaaS &middot; Paid Social</div>
         <div class="card-title">Coefficient</div>
         <div class="card-cta">View case study &rarr;</div>
       </div>
-    </article>
+    </a>
 
-    <article class="card" data-tags="brand" onclick="openModal(8)" tabindex="0" onkeydown="if(event.key==='Enter')openModal(8)">
-      <span class="card-num">09</span>
-      <img class="card-img" src="images/gathers.jpg" alt="Gathers project preview" onerror="this.src='https://placehold.co/600x450/14213D/F2A74B?text=Gathers'" />
+    <a class="card" href="work/gathers.html" data-tags="brand" aria-label="Gathers case study">
+      <span class="card-num">04</span>
+      <img class="card-img" loading="lazy" src="images/gathers.jpg" width="1200" height="900" alt="Gathers — project cover" onerror="this.src='https://placehold.co/600x450/14213D/F2A74B?text=Gathers'" />
       <div class="card-overlay">
         <div class="card-tag">Events &middot; Merchandise</div>
         <div class="card-title">Gathers</div>
         <div class="card-cta">View case study &rarr;</div>
       </div>
-    </article>
+    </a>
+
+    <a class="card" href="work/bcc26.html" data-tags="brand campaign" aria-label="BCC'26 case study">
+      <span class="card-num">05</span>
+      <img class="card-img" loading="lazy" src="images/bcc26.jpg" width="1200" height="900" alt="BCC'26 — project cover" onerror="this.src='https://placehold.co/600x450/2E7D4F/FFFFFF?text=BCC26'" />
+      <div class="card-overlay">
+        <div class="card-tag">Events &middot; Brand Campaign</div>
+        <div class="card-title">BCC&rsquo;26</div>
+        <div class="card-cta">View case study &rarr;</div>
+      </div>
+    </a>
+
+    <a class="card" href="work/semicab.html" data-tags="brand" aria-label="SemiCab case study">
+      <span class="card-num">06</span>
+      <img class="card-img" loading="lazy" src="images/semicab.jpg" width="1200" height="900" alt="SemiCab — project cover" onerror="this.src='https://placehold.co/600x450/141414/FF5500?text=SemiCab'" />
+      <div class="card-overlay">
+        <div class="card-tag">Logistics &middot; Brand</div>
+        <div class="card-title">SemiCab</div>
+        <div class="card-cta">View case study &rarr;</div>
+      </div>
+    </a>
+
+    <a class="card" href="work/sensecloud.html" data-tags="brand digital" aria-label="Sensecloud case study">
+      <span class="card-num">07</span>
+      <img class="card-img" loading="lazy" src="images/sensecloud.jpg" width="1200" height="900" alt="Sensecloud — project cover" onerror="this.src='https://placehold.co/600x450/F0EDE8/E24B4A?text=Sensecloud'" />
+      <div class="card-overlay">
+        <div class="card-tag">SaaS &middot; Brand &amp; Digital</div>
+        <div class="card-title">Sensecloud</div>
+        <div class="card-cta">View case study &rarr;</div>
+      </div>
+    </a>
+
+    <a class="card" href="work/epsilon.html" data-tags="digital campaign" aria-label="Epsilon case study">
+      <span class="card-num">08</span>
+      <img class="card-img" loading="lazy" src="images/epsilon.jpg" width="1200" height="900" alt="Epsilon — project cover" onerror="this.src='https://placehold.co/600x450/1A298E/C8D8FF?text=Epsilon'" />
+      <div class="card-overlay">
+        <div class="card-tag">AdTech &middot; Campaign</div>
+        <div class="card-title">Epsilon</div>
+        <div class="card-cta">View case study &rarr;</div>
+      </div>
+    </a>
+
+    <a class="card" href="work/nile.html" data-tags="digital campaign brand" aria-label="Nile Secure case study">
+      <span class="card-num">09</span>
+      <img class="card-img" loading="lazy" src="images/nile.jpg" width="1200" height="900" alt="Nile Secure — project cover" onerror="this.src='https://placehold.co/600x450/050510/FF3CA0?text=Nile+Secure'" />
+      <div class="card-overlay">
+        <div class="card-tag">NaaS &middot; Digital</div>
+        <div class="card-title">Nile Secure</div>
+        <div class="card-cta">View case study &rarr;</div>
+      </div>
+    </a>
 
   </section>
 
@@ -718,8 +846,8 @@
   <section id="about" class="about">
     <div class="about-left">
       <h2>Design that moves<br><em>brands forward.</em></h2>
-      <p>I'm John Francis, a Senior Brand &amp; Digital Designer based in Bangalore with a decade of experience across brand identity, campaign design, motion graphics, AI-generated video, and interactive digital design.</p>
-      <p>My work spans early-stage startups to established enterprise platforms — always anchored in clear strategy and sharp visual execution.</p>
+      <p>I'm John Francis, a Brand &amp; Digital Designer based in Bangalore with 9+ years across brand identity, campaign design, motion, AI-assisted production, and interactive design. I currently lead design on the global marketing team at Ascendion.</p>
+      <p>Along the way I've designed for Narvar, Microsoft, Thoughtworks, Cisco, Insider and Coefficient — from early-stage startups to established enterprise platforms, always anchored in clear strategy and sharp visual execution.</p>
     </div>
     <div class="about-right">
       <div>
@@ -769,210 +897,18 @@
   <section id="contact" class="contact">
     <div class="contact-left">
       <h3>Let's work together</h3>
-      <p>Open to freelance projects, full-time roles, and creative collaborations.</p>
+      <p>Open to select freelance projects and creative collaborations. Based in Bangalore, working North American hours.</p>
     </div>
-    <!-- Replace with your actual email address -->
     <a class="contact-btn" href="mailto:johnfrancisa548@gmail.com">Get in touch &rarr;</a>
   </section>
 
   <!-- FOOTER -->
   <footer>
-    <span>&copy; 2025 John Francis</span>
-    <span>Bangalore, India</span>
+    <span>&copy; 2026 John Francis</span>
+    <span>Bangalore, India &nbsp;·&nbsp; johnfrancisa548@gmail.com</span>
   </footer>
 
-  <!-- MODAL -->
-  <div class="backdrop" id="backdrop" onclick="handleBackdropClick(event)" role="dialog" aria-modal="true" aria-labelledby="modal-title-el">
-    <div class="modal" id="modal">
-      <div class="modal-media">
-        <button class="modal-close" onclick="closeModal()" aria-label="Close modal">&#x2715;</button>
-        <img id="modal-img" src="" alt="" />
-      </div>
-      <div class="modal-body">
-        <div class="modal-tag" id="modal-tag-el"></div>
-        <div class="modal-title" id="modal-title-el"></div>
-        <div class="modal-desc" id="modal-desc-el"></div>
-        <div class="modal-meta" id="modal-meta-el"></div>
-        <div>
-          <p class="deliverables-label">Deliverables</p>
-          <div class="deliverables" id="modal-del-el"></div>
-        </div>
-        <a class="modal-link" id="modal-link-el" href="#" target="_blank" rel="noopener">Open in Figma &rarr;</a>
-      </div>
-    </div>
-  </div>
-
   <script>
-    const PROJECTS = [
-      {
-        tag: "AdTech · Campaign Design",
-        title: "Epsilon",
-        desc: "A multi-deliverable creative brief for Epsilon's MarTech platform — spanning hackathon visual identity (TeXpedition '26), L&D email template redesign, and campaign analysis. Designed to strict brand guidelines with Avenir Next typography, Electric Blue and Navy palette, and a hand-drawn icon system.",
-        role: "Senior Designer",
-        client: "Epsilon",
-        year: "2024–25",
-        type: "Freelance Brief",
-        deliverables: ["Hackathon Identity", "Email Templates", "Campaign Analysis", "Brand Guidelines", "Figma Export"],
-        link: "https://www.figma.com/design/akzUgiQK9Lr9tTMn853bn8/Epsilon",
-        img: "images/epsilon.jpg",
-        modalImg: "images/epsilon-modal.jpg",
-        fallback: "https://placehold.co/600x900/1A298E/C8D8FF?text=Epsilon"
-      },
-      {
-        tag: "NaaS · Digital & Campaign",
-        title: "Nile Secure",
-        desc: "Full creative suite for a campus networking startup — landing page, HTML display ads, LinkedIn carousel, and a LinkedIn video ad. Visual direction moved from dark cinematic to isometric wireframe with hair-thin Nile Blue lines and near-white backgrounds. Prepared strategically for a senior design interview.",
-        role: "Senior Designer",
-        client: "Nile Secure",
-        year: "2024–25",
-        type: "Freelance Brief",
-        deliverables: ["Landing Page", "Display Ads (3 sizes)", "LinkedIn Carousel", "Video Ad", "Brand Audit"],
-        link: "https://www.figma.com/design/ImrEkxmRxcPjUyuxsit5FT/Nile",
-        img: "images/nile.jpg",
-        modalImg: "images/nile-modal.jpg",
-        fallback: "https://placehold.co/600x900/050510/FF3CA0?text=Nile+Secure"
-      },
-      {
-        tag: "Logistics · Brand Identity",
-        title: "Semi-Cab",
-        desc: "Bold brand identity for a logistics and trucking platform. A strong orange and black palette paired with a confident typographic system — built for scale across mobile app UI, product design, and brand stationery. Includes complete visual language and motion guidelines.",
-        role: "Brand Designer",
-        client: "Semi-Cab",
-        year: "2024",
-        type: "Brand Project",
-        deliverables: ["Logo & Identity", "App UI", "Brand Stationery", "Motion Guidelines", "Product Design"],
-        link: "https://www.figma.com/design/bxric3w0RPjrtAxn7NHTjm/Semi-Cab",
-        img: "images/semicab.jpg",
-        modalImg: "images/semicab-modal.jpg",
-        fallback: "https://placehold.co/600x900/141414/FF5500?text=Semi-Cab"
-      },
-      {
-        tag: "SaaS · Brand & Digital",
-        title: "Sensecloud",
-        desc: "Diverse creative work across a SaaS ecosystem — product branding for PackPal, editorial campaign concepts, dashboard UI explorations, and brand identity development. Strong use of bold typography, high-contrast colour systems, and expressive layout.",
-        role: "Brand & Digital Designer",
-        client: "Sensecloud",
-        year: "2024",
-        type: "Brand Project",
-        deliverables: ["Product Branding", "Editorial Design", "Dashboard UI", "Brand Concepts", "Campaign Creative"],
-        link: "https://www.figma.com/design/vtWSmOrVz3SA2iAHHGQDVM/Sensecloud",
-        img: "images/sensecloud.jpg",
-        modalImg: "images/sensecloud-modal.jpg",
-        fallback: "https://placehold.co/600x900/F0EDE8/E24B4A?text=Sensecloud"
-      },
-      {
-        tag: "Beauty & Retail · Editorial",
-        title: "Insider",
-        desc: "An in-depth digital growth guide for the beauty and cosmetics vertical — combining editorial layout, lifestyle photography art direction, and data visualisation. Designed for brand marketers driving customer acquisition and retention through Insider's personalisation platform.",
-        role: "Digital Designer",
-        client: "Insider",
-        year: "2024",
-        type: "Editorial Campaign",
-        deliverables: ["Editorial Layout", "Data Visualisation", "Photography Direction", "Digital Guide", "Brand Assets"],
-        link: "https://www.figma.com/design/vo7yRP7IRssLmg9ReF9C40/Insider",
-        img: "images/insider.jpg",
-        modalImg: "images/insider-modal.jpg",
-        fallback: "https://placehold.co/600x900/F5EDE4/D85A30?text=Insider"
-      },
-      {
-        tag: "Events · Brand Campaign",
-        title: "BCC’26",
-        desc: "Poster concept showcase for the Bangalore Craft Beer Crawl 2026 — a 30-day, 15-brewery, 8-city campaign. Starting from a moodboard of international beer-festival posters, the work explores illustrated, retro-print, hand-drawn crowd and chrome-type directions, with Bangalore landmarks, autos and bunting, and bilingual English and Kannada lockups. It lands on a two-colour hero poster built around a raised glass.",
-        role: "Brand Designer",
-        client: "Bangalore Craft Beer Crawl",
-        year: "2026",
-        type: "Concept Showcase",
-        deliverables: ["Poster Concepts", "Moodboard", "Illustration Direction", "Bilingual Typography", "Final Poster"],
-        link: "projects/bcc26-poster-concepts.pdf",
-        linkLabel: "View PDF",
-        img: "images/bcc26.jpg",
-        modalImg: "images/bcc26-poster.jpg",
-        fallback: "https://placehold.co/600x900/2E7D4F/FFFFFF?text=BCC26"
-      },
-      {
-        tag: "Ecommerce · Website Redesign",
-        title: "Narvar",
-        desc: "Homepage redesign for Narvar's post-purchase platform. An AI-led hero built around intelligent personalisation leads into a radial platform diagram, a retail logo wall, and a retailer proof section with stats and testimonials — a dark, enterprise-grade visual system carried end to end.",
-        role: "Senior Designer",
-        client: "Narvar",
-        year: "2024–25",
-        type: "Website Redesign",
-        deliverables: ["Homepage Design", "Hero & Platform Diagram", "Stats Module", "Testimonials Grid", "Responsive Layout"],
-        link: "https://www.figma.com/design/eybUNE1qSa9kAVjgjqmXBB/Narvar-Homepage-Redesign",
-        img: "images/narvar.jpg",
-        modalImg: "images/narvar-modal.jpg",
-        fallback: "https://placehold.co/600x900/0A1A3F/6FA8FF?text=Narvar"
-      },
-      {
-        tag: "B2B SaaS · Paid Social",
-        title: "Coefficient",
-        desc: "“Close the Gap” ad campaign for Coefficient's live-data connector. A torn spreadsheet set against live dashboards dramatises the gap between stale Monday exports and real-time numbers, carried across paid social, display, and story formats.",
-        role: "Designer",
-        client: "Coefficient",
-        year: "2024",
-        type: "Paid Social Campaign",
-        deliverables: ["Paid Social Ads", "Display Banners", "Story Formats", "Campaign Concept", "Ad System"],
-        link: "https://www.figma.com/design/iFGV4jFNZKC27jmWkzBWIY/Coefficient",
-        img: "images/coefficient.jpg",
-        modalImg: "images/coefficient-modal.jpg",
-        fallback: "https://placehold.co/600x900/101418/36C98A?text=Coefficient"
-      },
-      {
-        tag: "Events · Merchandise",
-        title: "Gathers",
-        desc: "Custom patch bar for Narvar's presence at the Gathers event in San Diego. A two-step on-site experience: guests picked one of four Narvar logo patches, then chose from seven San Diego city designs — stamps, a retro badge and a script lockup — applied live to their jacket or bag, with signage to match.",
-        role: "Brand & Event Designer",
-        client: "Narvar",
-        year: "2025",
-        type: "Event Merchandise",
-        deliverables: ["Narvar Patches", "San Diego Patches", "Patch Bar Signage", "Event Branding", "On-site Experience"],
-        link: "https://www.figma.com/design/qP4EXsd2eEr5gu1nuJX0ZA/2025---Event---Gathers-SD-India",
-        img: "images/gathers.jpg",
-        modalImg: "images/gathers-modal.jpg",
-        fallback: "https://placehold.co/600x900/14213D/F2A74B?text=Gathers"
-      }
-    ];
-
-    function openModal(i) {
-      const p = PROJECTS[i];
-      document.getElementById('modal-tag-el').textContent = p.tag;
-      document.getElementById('modal-title-el').textContent = p.title;
-      document.getElementById('modal-desc-el').textContent = p.desc;
-      const linkEl = document.getElementById('modal-link-el');
-      linkEl.href = p.link;
-      linkEl.textContent = (p.linkLabel || 'Open in Figma') + ' →';
-
-      const img = document.getElementById('modal-img');
-      img.src = p.modalImg || p.img;
-      img.alt = p.title + ' project preview';
-      img.onerror = function() { this.src = p.fallback; };
-
-      const meta = document.getElementById('modal-meta-el');
-      meta.innerHTML = [
-        ['Role', p.role],
-        ['Client', p.client],
-        ['Year', p.year],
-        ['Type', p.type]
-      ].map(([l, v]) =>
-        `<div class="meta-item"><div class="meta-label">${l}</div><div class="meta-value">${v}</div></div>`
-      ).join('');
-
-      document.getElementById('modal-del-el').innerHTML =
-        p.deliverables.map(d => `<span class="pill">${d}</span>`).join('');
-
-      document.getElementById('backdrop').classList.add('open');
-      document.body.style.overflow = 'hidden';
-    }
-
-    function closeModal() {
-      document.getElementById('backdrop').classList.remove('open');
-      document.body.style.overflow = '';
-    }
-
-    function handleBackdropClick(e) {
-      if (e.target === document.getElementById('backdrop')) closeModal();
-    }
-
     function filter(type, btn) {
       document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
@@ -981,10 +917,6 @@
         card.classList.toggle('hidden', type !== 'all' && !tags.includes(type));
       });
     }
-
-    document.addEventListener('keydown', e => {
-      if (e.key === 'Escape') closeModal();
-    });
   </script>
 </body>
 </html>
