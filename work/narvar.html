@@ -59,7 +59,21 @@ nav{display:flex;justify-content:space-between;align-items:center;padding:1.4rem
 .nextp a:hover .nt{color:var(--text-2)}
 footer{padding:1.5rem 2.5rem;border-top:.5px solid var(--border);display:flex;justify-content:space-between;font-size:12px;color:var(--text-3);flex-wrap:wrap;gap:.5rem}
 ::selection{background:var(--text);color:var(--bg)}
-:root{--accent:#2f6bff}</style>
+:root{--accent:#2f6bff}
+.glance{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:.5px solid var(--border);border-radius:var(--radius);overflow:hidden;margin-bottom:3rem}
+.glance > div{padding:1.15rem 1.4rem;border-right:.5px solid var(--border)}
+.glance > div:last-child{border-right:none}
+.glance .gv{font-family:'DM Serif Display',serif;font-size:21px;line-height:1.12;margin-bottom:4px}
+.glance .gl{font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--text-3)}
+@media (max-width:640px){.glance{grid-template-columns:1fr}.glance > div{border-right:none;border-bottom:.5px solid var(--border)}.glance > div:last-child{border-bottom:none}}
+.pagenav{border-top:.5px solid var(--border);margin-top:4rem;display:grid;grid-template-columns:1fr 1fr}
+.pagenav a{padding:2.5rem;text-decoration:none;color:var(--text)}
+.pagenav .next{text-align:right;border-left:.5px solid var(--border)}
+.pagenav .nl{font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-3);margin-bottom:6px}
+.pagenav .nt{font-family:'DM Serif Display',serif;font-size:26px;letter-spacing:-.5px}
+.pagenav a:hover .nt{color:var(--text-2)}
+@media (max-width:560px){.pagenav{grid-template-columns:1fr}.pagenav .next{text-align:left;border-left:none;border-top:.5px solid var(--border)}}
+</style>
 </head>
 <body>
 <nav>
@@ -76,6 +90,7 @@ footer{padding:1.5rem 2.5rem;border-top:.5px solid var(--border);display:flex;ju
   <h1 class="ch-title">Narvar</h1>
   <p class="ch-sub">Redesigning the homepage of a post-purchase platform used by 1,500+ of the world&#x27;s leading retail brands.</p>
   <div class="ch-meta"><div><div class="ml">Role</div><div class="mv">Senior Designer</div></div><div><div class="ml">Client</div><div class="mv">Narvar</div></div><div><div class="ml">Year</div><div class="mv">2024–25</div></div><div><div class="ml">Type</div><div class="mv">Website Redesign</div></div></div>
+  <div class="glance"><div><div class="gv">Full homepage</div><div class="gl">end-to-end redesign</div></div><div><div class="gv">Enterprise B2B</div><div class="gl">post-purchase SaaS</div></div><div><div class="gv">Hero &rarr; proof</div><div class="gl">narrative flow</div></div></div>
 </div>
 <div class="full"><figure class="figure hero"><img src="../images/work/narvar/hero.jpg" alt="Narvar — Website Redesign" /></figure></div>
 <section class="prose"><h2>Overview</h2><p>Narvar powers the post-purchase experience — tracking, returns, and personalisation — for more than 1,500 retail brands. The homepage had to carry a lot at once: explain an AI-driven platform, prove scale, and convince enterprise buyers, all above the fold. I redesigned it as a single, confident narrative that moves from promise to proof.</p></section>
@@ -89,12 +104,10 @@ footer{padding:1.5rem 2.5rem;border-top:.5px solid var(--border);display:flex;ju
   <div class="delv"><span class="pill">Homepage Design</span><span class="pill">Hero &amp; Platform Diagram</span><span class="pill">Stats Module</span><span class="pill">Testimonials Grid</span><span class="pill">Responsive Layout</span></div>
   <a class="ext" href="https://www.figma.com/design/eybUNE1qSa9kAVjgjqmXBB/Narvar-Homepage-Redesign" target="_blank" rel="noopener">View in Figma &rarr;</a>
 </div>
-<div class="nextp">
-  <a href="insider.html">
-    <div><div class="nl">Next project</div><div class="nt">Insider</div></div>
-    <div class="nt">&rarr;</div>
-  </a>
-</div>
+<nav class="pagenav">
+  <a class="prev" href="nile.html"><div class="nl">&larr; Previous</div><div class="nt">Nile Secure</div></a>
+  <a class="next" href="insider.html"><div class="nl">Next &rarr;</div><div class="nt">Insider</div></a>
+</nav>
 <footer><span>&copy; 2026 John Francis</span><span>jfa.design</span></footer>
 </body>
 </html>

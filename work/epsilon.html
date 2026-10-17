@@ -59,7 +59,21 @@ nav{display:flex;justify-content:space-between;align-items:center;padding:1.4rem
 .nextp a:hover .nt{color:var(--text-2)}
 footer{padding:1.5rem 2.5rem;border-top:.5px solid var(--border);display:flex;justify-content:space-between;font-size:12px;color:var(--text-3);flex-wrap:wrap;gap:.5rem}
 ::selection{background:var(--text);color:var(--bg)}
-:root{--accent:#1a5cff}</style>
+:root{--accent:#1a5cff}
+.glance{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:.5px solid var(--border);border-radius:var(--radius);overflow:hidden;margin-bottom:3rem}
+.glance > div{padding:1.15rem 1.4rem;border-right:.5px solid var(--border)}
+.glance > div:last-child{border-right:none}
+.glance .gv{font-family:'DM Serif Display',serif;font-size:21px;line-height:1.12;margin-bottom:4px}
+.glance .gl{font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--text-3)}
+@media (max-width:640px){.glance{grid-template-columns:1fr}.glance > div{border-right:none;border-bottom:.5px solid var(--border)}.glance > div:last-child{border-bottom:none}}
+.pagenav{border-top:.5px solid var(--border);margin-top:4rem;display:grid;grid-template-columns:1fr 1fr}
+.pagenav a{padding:2.5rem;text-decoration:none;color:var(--text)}
+.pagenav .next{text-align:right;border-left:.5px solid var(--border)}
+.pagenav .nl{font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-3);margin-bottom:6px}
+.pagenav .nt{font-family:'DM Serif Display',serif;font-size:26px;letter-spacing:-.5px}
+.pagenav a:hover .nt{color:var(--text-2)}
+@media (max-width:560px){.pagenav{grid-template-columns:1fr}.pagenav .next{text-align:left;border-left:none;border-top:.5px solid var(--border)}}
+</style>
 </head>
 <body>
 <nav>
@@ -76,6 +90,7 @@ footer{padding:1.5rem 2.5rem;border-top:.5px solid var(--border);display:flex;ju
   <h1 class="ch-title">Epsilon</h1>
   <p class="ch-sub">A self-initiated creative brief for a MarTech platform — hackathon identity, email and campaign.</p>
   <div class="ch-meta"><div><div class="ml">Role</div><div class="mv">Senior Designer</div></div><div><div class="ml">Client</div><div class="mv">Epsilon</div></div><div><div class="ml">Year</div><div class="mv">2024–25</div></div><div><div class="ml">Type</div><div class="mv">Self-Initiated Brief</div></div></div>
+  <div class="glance"><div><div class="gv">Landing + email</div><div class="gl">+ social</div></div><div><div class="gv">TeXpedition '26</div><div class="gl">hackathon</div></div><div><div class="gv">To brand guidelines</div><div class="gl">MarTech</div></div></div>
 </div>
 <div class="full"><figure class="figure hero"><img src="../images/work/epsilon/hero.jpg" alt="Epsilon — Self-Initiated Brief" /></figure></div>
 <section class="prose"><h2>Overview</h2><p>A self-initiated brief exploring creative for Epsilon&#x27;s MarTech platform, worked to the real brand guidelines — Electric Blue and Navy, strict type, a hand-drawn icon system. The centrepiece is TeXpedition &#x27;26, a campus hackathon, taken from concept to a full landing page.</p></section>
@@ -88,12 +103,10 @@ footer{padding:1.5rem 2.5rem;border-top:.5px solid var(--border);display:flex;ju
   <div class="delv"><span class="pill">Hackathon Identity</span><span class="pill">Landing Page</span><span class="pill">Email Templates</span><span class="pill">Campaign Analysis</span><span class="pill">Brand Guidelines</span></div>
   <a class="ext" href="https://www.figma.com/design/akzUgiQK9Lr9tTMn853bn8/Epsilon" target="_blank" rel="noopener">View in Figma &rarr;</a>
 </div>
-<div class="nextp">
-  <a href="nile.html">
-    <div><div class="nl">Next project</div><div class="nt">Nile Secure</div></div>
-    <div class="nt">&rarr;</div>
-  </a>
-</div>
+<nav class="pagenav">
+  <a class="prev" href="sensecloud.html"><div class="nl">&larr; Previous</div><div class="nt">Sensecloud</div></a>
+  <a class="next" href="nile.html"><div class="nl">Next &rarr;</div><div class="nt">Nile Secure</div></a>
+</nav>
 <footer><span>&copy; 2026 John Francis</span><span>jfa.design</span></footer>
 </body>
 </html>

@@ -59,7 +59,21 @@ nav{display:flex;justify-content:space-between;align-items:center;padding:1.4rem
 .nextp a:hover .nt{color:var(--text-2)}
 footer{padding:1.5rem 2.5rem;border-top:.5px solid var(--border);display:flex;justify-content:space-between;font-size:12px;color:var(--text-3);flex-wrap:wrap;gap:.5rem}
 ::selection{background:var(--text);color:var(--bg)}
-:root{--accent:#f2a74b}</style>
+:root{--accent:#f2a74b}
+.glance{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:.5px solid var(--border);border-radius:var(--radius);overflow:hidden;margin-bottom:3rem}
+.glance > div{padding:1.15rem 1.4rem;border-right:.5px solid var(--border)}
+.glance > div:last-child{border-right:none}
+.glance .gv{font-family:'DM Serif Display',serif;font-size:21px;line-height:1.12;margin-bottom:4px}
+.glance .gl{font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--text-3)}
+@media (max-width:640px){.glance{grid-template-columns:1fr}.glance > div{border-right:none;border-bottom:.5px solid var(--border)}.glance > div:last-child{border-bottom:none}}
+.pagenav{border-top:.5px solid var(--border);margin-top:4rem;display:grid;grid-template-columns:1fr 1fr}
+.pagenav a{padding:2.5rem;text-decoration:none;color:var(--text)}
+.pagenav .next{text-align:right;border-left:.5px solid var(--border)}
+.pagenav .nl{font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-3);margin-bottom:6px}
+.pagenav .nt{font-family:'DM Serif Display',serif;font-size:26px;letter-spacing:-.5px}
+.pagenav a:hover .nt{color:var(--text-2)}
+@media (max-width:560px){.pagenav{grid-template-columns:1fr}.pagenav .next{text-align:left;border-left:none;border-top:.5px solid var(--border)}}
+</style>
 </head>
 <body>
 <nav>
@@ -76,6 +90,7 @@ footer{padding:1.5rem 2.5rem;border-top:.5px solid var(--border);display:flex;ju
   <h1 class="ch-title">Gathers</h1>
   <p class="ch-sub">A custom patch bar — branded event merchandise guests designed themselves, on the spot.</p>
   <div class="ch-meta"><div><div class="ml">Role</div><div class="mv">Brand &amp; Event Designer</div></div><div><div class="ml">Client</div><div class="mv">Narvar</div></div><div><div class="ml">Year</div><div class="mv">2025</div></div><div><div class="ml">Type</div><div class="mv">Event Merchandise</div></div></div>
+  <div class="glance"><div><div class="gv">11 patch designs</div><div class="gl">Narvar + San Diego</div></div><div><div class="gv">2-step bar</div><div class="gl">built on-site</div></div><div><div class="gv">Event merch</div><div class="gl">San Diego</div></div></div>
 </div>
 <div class="full"><figure class="figure hero"><img src="../images/work/gathers/hero.jpg" alt="Gathers — Event Merchandise" /></figure></div>
 <section class="prose"><h2>Overview</h2><p>For Narvar&#x27;s presence at the Gathers event in San Diego, I designed a patch bar — a hands-on merchandise experience where guests built their own keepsake instead of being handed a generic giveaway.</p></section>
@@ -87,12 +102,10 @@ footer{padding:1.5rem 2.5rem;border-top:.5px solid var(--border);display:flex;ju
   <div class="delv"><span class="pill">Narvar Patches</span><span class="pill">San Diego Patches</span><span class="pill">Patch Bar Signage</span><span class="pill">Event Branding</span><span class="pill">On-site Experience</span></div>
   <a class="ext" href="https://www.figma.com/design/qP4EXsd2eEr5gu1nuJX0ZA/2025---Event---Gathers-SD-India" target="_blank" rel="noopener">View in Figma &rarr;</a>
 </div>
-<div class="nextp">
-  <a href="bcc26.html">
-    <div><div class="nl">Next project</div><div class="nt">BCC’26</div></div>
-    <div class="nt">&rarr;</div>
-  </a>
-</div>
+<nav class="pagenav">
+  <a class="prev" href="coefficient.html"><div class="nl">&larr; Previous</div><div class="nt">Coefficient</div></a>
+  <a class="next" href="bcc26.html"><div class="nl">Next &rarr;</div><div class="nt">BCC&rsquo;26</div></a>
+</nav>
 <footer><span>&copy; 2026 John Francis</span><span>jfa.design</span></footer>
 </body>
 </html>

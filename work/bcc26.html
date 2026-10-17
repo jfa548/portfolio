@@ -59,7 +59,21 @@ nav{display:flex;justify-content:space-between;align-items:center;padding:1.4rem
 .nextp a:hover .nt{color:var(--text-2)}
 footer{padding:1.5rem 2.5rem;border-top:.5px solid var(--border);display:flex;justify-content:space-between;font-size:12px;color:var(--text-3);flex-wrap:wrap;gap:.5rem}
 ::selection{background:var(--text);color:var(--bg)}
-:root{--accent:#2e7d4f}</style>
+:root{--accent:#2e7d4f}
+.glance{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:.5px solid var(--border);border-radius:var(--radius);overflow:hidden;margin-bottom:3rem}
+.glance > div{padding:1.15rem 1.4rem;border-right:.5px solid var(--border)}
+.glance > div:last-child{border-right:none}
+.glance .gv{font-family:'DM Serif Display',serif;font-size:21px;line-height:1.12;margin-bottom:4px}
+.glance .gl{font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--text-3)}
+@media (max-width:640px){.glance{grid-template-columns:1fr}.glance > div{border-right:none;border-bottom:.5px solid var(--border)}.glance > div:last-child{border-bottom:none}}
+.pagenav{border-top:.5px solid var(--border);margin-top:4rem;display:grid;grid-template-columns:1fr 1fr}
+.pagenav a{padding:2.5rem;text-decoration:none;color:var(--text)}
+.pagenav .next{text-align:right;border-left:.5px solid var(--border)}
+.pagenav .nl{font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-3);margin-bottom:6px}
+.pagenav .nt{font-family:'DM Serif Display',serif;font-size:26px;letter-spacing:-.5px}
+.pagenav a:hover .nt{color:var(--text-2)}
+@media (max-width:560px){.pagenav{grid-template-columns:1fr}.pagenav .next{text-align:left;border-left:none;border-top:.5px solid var(--border)}}
+</style>
 </head>
 <body>
 <nav>
@@ -76,6 +90,7 @@ footer{padding:1.5rem 2.5rem;border-top:.5px solid var(--border);display:flex;ju
   <h1 class="ch-title">BCC’26</h1>
   <p class="ch-sub">Poster concepts for a 30-day, 15-brewery, 8-city craft-beer campaign.</p>
   <div class="ch-meta"><div><div class="ml">Role</div><div class="mv">Brand Designer</div></div><div><div class="ml">Client</div><div class="mv">Bangalore Craft Beer Crawl</div></div><div><div class="ml">Year</div><div class="mv">2026</div></div><div><div class="ml">Type</div><div class="mv">Concept Showcase</div></div></div>
+  <div class="glance"><div><div class="gv">6 directions</div><div class="gl">explored</div></div><div><div class="gv">8 cities · 30 days</div><div class="gl">campaign</div></div><div><div class="gv">Bilingual</div><div class="gl">EN + Kannada</div></div></div>
 </div>
 <div class="full"><figure class="figure hero"><img src="../images/work/bcc26/hero.jpg" alt="BCC’26 — Concept Showcase" /></figure></div>
 <section class="prose"><h2>Overview</h2><p>The Bangalore Craft Beer Crawl 2026 is a 30-day, 15-brewery, 8-city campaign. This is a self-initiated concept showcase: a run of poster directions that explore how the event could look, from first moodboard to a finished hero poster.</p></section>
@@ -96,12 +111,10 @@ footer{padding:1.5rem 2.5rem;border-top:.5px solid var(--border);display:flex;ju
   <div class="delv"><span class="pill">Poster Concepts</span><span class="pill">Moodboard</span><span class="pill">Illustration Direction</span><span class="pill">Bilingual Typography</span><span class="pill">Final Poster</span></div>
   <a class="ext" href="../projects/bcc26-poster-concepts.pdf" target="_blank" rel="noopener">View full PDF &rarr;</a>
 </div>
-<div class="nextp">
-  <a href="semicab.html">
-    <div><div class="nl">Next project</div><div class="nt">SemiCab</div></div>
-    <div class="nt">&rarr;</div>
-  </a>
-</div>
+<nav class="pagenav">
+  <a class="prev" href="gathers.html"><div class="nl">&larr; Previous</div><div class="nt">Gathers</div></a>
+  <a class="next" href="semicab.html"><div class="nl">Next &rarr;</div><div class="nt">SemiCab</div></a>
+</nav>
 <footer><span>&copy; 2026 John Francis</span><span>jfa.design</span></footer>
 </body>
 </html>

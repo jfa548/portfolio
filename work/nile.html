@@ -59,7 +59,21 @@ nav{display:flex;justify-content:space-between;align-items:center;padding:1.4rem
 .nextp a:hover .nt{color:var(--text-2)}
 footer{padding:1.5rem 2.5rem;border-top:.5px solid var(--border);display:flex;justify-content:space-between;font-size:12px;color:var(--text-3);flex-wrap:wrap;gap:.5rem}
 ::selection{background:var(--text);color:var(--bg)}
-:root{--accent:#ff3ca0}</style>
+:root{--accent:#ff3ca0}
+.glance{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:.5px solid var(--border);border-radius:var(--radius);overflow:hidden;margin-bottom:3rem}
+.glance > div{padding:1.15rem 1.4rem;border-right:.5px solid var(--border)}
+.glance > div:last-child{border-right:none}
+.glance .gv{font-family:'DM Serif Display',serif;font-size:21px;line-height:1.12;margin-bottom:4px}
+.glance .gl{font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--text-3)}
+@media (max-width:640px){.glance{grid-template-columns:1fr}.glance > div{border-right:none;border-bottom:.5px solid var(--border)}.glance > div:last-child{border-bottom:none}}
+.pagenav{border-top:.5px solid var(--border);margin-top:4rem;display:grid;grid-template-columns:1fr 1fr}
+.pagenav a{padding:2.5rem;text-decoration:none;color:var(--text)}
+.pagenav .next{text-align:right;border-left:.5px solid var(--border)}
+.pagenav .nl{font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-3);margin-bottom:6px}
+.pagenav .nt{font-family:'DM Serif Display',serif;font-size:26px;letter-spacing:-.5px}
+.pagenav a:hover .nt{color:var(--text-2)}
+@media (max-width:560px){.pagenav{grid-template-columns:1fr}.pagenav .next{text-align:left;border-left:none;border-top:.5px solid var(--border)}}
+</style>
 </head>
 <body>
 <nav>
@@ -76,6 +90,7 @@ footer{padding:1.5rem 2.5rem;border-top:.5px solid var(--border);display:flex;ju
   <h1 class="ch-title">Nile Secure</h1>
   <p class="ch-sub">A full campaign suite for a campus-networking startup — concept work for a senior design role.</p>
   <div class="ch-meta"><div><div class="ml">Role</div><div class="mv">Senior Designer</div></div><div><div class="ml">Client</div><div class="mv">Nile Secure</div></div><div><div class="ml">Year</div><div class="mv">2024–25</div></div><div><div class="ml">Type</div><div class="mv">Self-Initiated Brief</div></div></div>
+  <div class="glance"><div><div class="gv">Landing + carousel</div><div class="gl">+ display ads</div></div><div><div class="gv">Campaign suite</div><div class="gl">end-to-end</div></div><div><div class="gv">Campus NaaS</div><div class="gl">category</div></div></div>
 </div>
 <div class="full"><figure class="figure hero"><img src="../images/work/nile/hero.jpg" alt="Nile Secure — Self-Initiated Brief" /></figure></div>
 <section class="prose"><h2>Overview</h2><p>A self-initiated campaign suite for Nile&#x27;s AI-powered campus network, built as concept work ahead of a senior design conversation. It spans a landing page, social creative and display ads, all driving to one asset: the Architecture Blueprint whitepaper.</p></section>
@@ -93,12 +108,10 @@ footer{padding:1.5rem 2.5rem;border-top:.5px solid var(--border);display:flex;ju
   <div class="delv"><span class="pill">Landing Page</span><span class="pill">Display Ads</span><span class="pill">LinkedIn Carousel</span><span class="pill">Video Ad</span><span class="pill">Brand Audit</span></div>
   <a class="ext" href="https://www.figma.com/design/ImrEkxmRxcPjUyuxsit5FT/Nile" target="_blank" rel="noopener">View in Figma &rarr;</a>
 </div>
-<div class="nextp">
-  <a href="narvar.html">
-    <div><div class="nl">Next project</div><div class="nt">Narvar</div></div>
-    <div class="nt">&rarr;</div>
-  </a>
-</div>
+<nav class="pagenav">
+  <a class="prev" href="epsilon.html"><div class="nl">&larr; Previous</div><div class="nt">Epsilon</div></a>
+  <a class="next" href="narvar.html"><div class="nl">Next &rarr;</div><div class="nt">Narvar</div></a>
+</nav>
 <footer><span>&copy; 2026 John Francis</span><span>jfa.design</span></footer>
 </body>
 </html>

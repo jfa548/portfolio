@@ -59,7 +59,21 @@ nav{display:flex;justify-content:space-between;align-items:center;padding:1.4rem
 .nextp a:hover .nt{color:var(--text-2)}
 footer{padding:1.5rem 2.5rem;border-top:.5px solid var(--border);display:flex;justify-content:space-between;font-size:12px;color:var(--text-3);flex-wrap:wrap;gap:.5rem}
 ::selection{background:var(--text);color:var(--bg)}
-:root{--accent:#d85a30}</style>
+:root{--accent:#d85a30}
+.glance{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:.5px solid var(--border);border-radius:var(--radius);overflow:hidden;margin-bottom:3rem}
+.glance > div{padding:1.15rem 1.4rem;border-right:.5px solid var(--border)}
+.glance > div:last-child{border-right:none}
+.glance .gv{font-family:'DM Serif Display',serif;font-size:21px;line-height:1.12;margin-bottom:4px}
+.glance .gl{font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--text-3)}
+@media (max-width:640px){.glance{grid-template-columns:1fr}.glance > div{border-right:none;border-bottom:.5px solid var(--border)}.glance > div:last-child{border-bottom:none}}
+.pagenav{border-top:.5px solid var(--border);margin-top:4rem;display:grid;grid-template-columns:1fr 1fr}
+.pagenav a{padding:2.5rem;text-decoration:none;color:var(--text)}
+.pagenav .next{text-align:right;border-left:.5px solid var(--border)}
+.pagenav .nl{font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-3);margin-bottom:6px}
+.pagenav .nt{font-family:'DM Serif Display',serif;font-size:26px;letter-spacing:-.5px}
+.pagenav a:hover .nt{color:var(--text-2)}
+@media (max-width:560px){.pagenav{grid-template-columns:1fr}.pagenav .next{text-align:left;border-left:none;border-top:.5px solid var(--border)}}
+</style>
 </head>
 <body>
 <nav>
@@ -76,6 +90,7 @@ footer{padding:1.5rem 2.5rem;border-top:.5px solid var(--border);display:flex;ju
   <h1 class="ch-title">Insider</h1>
   <p class="ch-sub">An editorial growth guide and event system for a customer-engagement platform in the beauty vertical.</p>
   <div class="ch-meta"><div><div class="ml">Role</div><div class="mv">Digital Designer</div></div><div><div class="ml">Client</div><div class="mv">Insider</div></div><div><div class="ml">Year</div><div class="mv">2024</div></div><div><div class="ml">Type</div><div class="mv">Editorial Campaign</div></div></div>
+  <div class="glance"><div><div class="gv">Guide + event</div><div class="gl">two linked pieces</div></div><div><div class="gv">Uplift 2025</div><div class="gl">event identity</div></div><div><div class="gv">Beauty &amp; retail</div><div class="gl">vertical</div></div></div>
 </div>
 <div class="full"><figure class="figure hero"><img src="../images/work/insider/hero.jpg" alt="Insider — Editorial Campaign" /></figure></div>
 <section class="prose"><h2>Overview</h2><p>Insider helps brands personalise customer experiences. For the beauty and cosmetics vertical, the work spanned two connected pieces: an in-depth digital growth guide, and the identity and promotion for Uplift — the brand&#x27;s customer-experience event.</p></section>
@@ -95,12 +110,10 @@ footer{padding:1.5rem 2.5rem;border-top:.5px solid var(--border);display:flex;ju
   <div class="delv"><span class="pill">Editorial Layout</span><span class="pill">Data Visualisation</span><span class="pill">Event Identity</span><span class="pill">Social &amp; Display Ads</span><span class="pill">Photography Direction</span></div>
   <a class="ext" href="https://www.figma.com/design/vo7yRP7IRssLmg9ReF9C40/Insider" target="_blank" rel="noopener">View in Figma &rarr;</a>
 </div>
-<div class="nextp">
-  <a href="coefficient.html">
-    <div><div class="nl">Next project</div><div class="nt">Coefficient</div></div>
-    <div class="nt">&rarr;</div>
-  </a>
-</div>
+<nav class="pagenav">
+  <a class="prev" href="narvar.html"><div class="nl">&larr; Previous</div><div class="nt">Narvar</div></a>
+  <a class="next" href="coefficient.html"><div class="nl">Next &rarr;</div><div class="nt">Coefficient</div></a>
+</nav>
 <footer><span>&copy; 2026 John Francis</span><span>jfa.design</span></footer>
 </body>
 </html>
