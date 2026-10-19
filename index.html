@@ -3,16 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>John Francis — Brand & Digital Designer</title>
-  <meta name="description" content="Brand & Digital Designer with 10 years across B2B SaaS and enterprise tech — Narvar, Microsoft, Thoughtworks, Cisco and now Ascendion. Brand identity, campaign systems, and digital experiences." />
+  <title>John Francis — Senior Brand Designer</title>
+  <meta name="description" content="Senior Brand Designer with 10 years across B2B SaaS and enterprise tech — Narvar, Microsoft, Thoughtworks, Cisco and now Ascendion. Brand identity, campaign systems, and digital experiences." />
   <link rel="canonical" href="https://jfa.design/" />
-  <meta property="og:title" content="John Francis — Brand & Digital Designer" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta property="og:title" content="John Francis — Senior Brand Designer" />
   <meta property="og:description" content="10 years designing brand identities, campaign systems and digital experiences for tech companies — Narvar, Microsoft, Thoughtworks, Cisco, Ascendion." />
   <meta property="og:image" content="https://jfa.design/images/og.jpg" />
   <meta property="og:url" content="https://jfa.design/" />
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="John Francis — Brand & Digital Designer" />
+  <meta name="twitter:title" content="John Francis — Senior Brand Designer" />
   <meta name="twitter:description" content="Brand identity, campaign systems and digital experiences for tech companies." />
   <meta name="twitter:image" content="https://jfa.design/images/og.jpg" />
   <script>
@@ -31,7 +32,7 @@
       --bg-3: #eeede9;
       --text: #111110;
       --text-2: #6b6a66;
-      --text-3: #a09f9a;
+      --text-3: #757470;
       --border: rgba(0,0,0,0.1);
       --border-2: rgba(0,0,0,0.18);
       --radius: 12px;
@@ -45,7 +46,7 @@
         --bg-3: #232320;
         --text: #f0efe9;
         --text-2: #8f8e89;
-        --text-3: #5a5955;
+        --text-3: #8b8a85;
         --border: rgba(255,255,255,0.1);
         --border-2: rgba(255,255,255,0.18);
       }
@@ -74,6 +75,23 @@
       background: var(--bg);
       z-index: 50;
       backdrop-filter: blur(12px);
+    }
+
+    @media (max-width: 520px) {
+      nav {
+        padding: 1.2rem 1.5rem;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+      }
+      .nav-links {
+        gap: 1.2rem !important;
+        order: 3;
+        width: 100%;
+        justify-content: flex-start;
+      }
+      .nav-links a {
+        font-size: 12px !important;
+      }
     }
 
     .logo {
@@ -173,8 +191,8 @@
       will-change: auto;
     }
 
-    /* Speed up any remaining transitions */
-    * {
+    /* Speed up any remaining transitions, but preserve specific card animations */
+    *:not(.card):not(.card-img):not(.card-overlay):not(.card-cta) {
       transition-duration: 0.15s;
     }
 
@@ -304,6 +322,13 @@
 
     .card:hover .card-overlay { opacity: 1; }
 
+    /* Make card info visible on touch devices and small screens */
+    @media (hover: none) and (pointer: coarse), (max-width: 768px) {
+      .card-overlay {
+        opacity: 1;
+      }
+    }
+
     .card-num {
       position: absolute;
       top: 1.1rem;
@@ -348,177 +373,6 @@
     .card:hover .card-cta {
       background: rgba(255,255,255,0.2);
     }
-
-    /* ── MODAL BACKDROP ── */
-    .backdrop {
-      display: none;
-      position: fixed;
-      inset: 0;
-      background: rgba(0,0,0,0.65);
-      z-index: 200;
-      align-items: center;
-      justify-content: center;
-      padding: 2rem;
-      backdrop-filter: blur(4px);
-    }
-
-    .backdrop.open { display: flex; }
-
-    /* ── MODAL ── */
-    .modal {
-      background: var(--bg);
-      border-radius: var(--radius);
-      width: 100%;
-      max-width: 860px;
-      max-height: 90vh;
-      overflow-y: auto;
-      border: 0.5px solid var(--border-2);
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      position: relative;
-    }
-
-    @media (max-width: 640px) {
-      .modal { grid-template-columns: 1fr; }
-    }
-
-    .modal-media {
-      position: relative;
-      overflow: hidden;
-      border-radius: var(--radius) 0 0 var(--radius);
-      min-height: 320px;
-      background: var(--bg-3);
-    }
-
-    @media (max-width: 640px) {
-      .modal-media {
-        border-radius: var(--radius) var(--radius) 0 0;
-        min-height: 220px;
-      }
-    }
-
-    .modal-media img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: top;
-      display: block;
-    }
-
-    .modal-close {
-      position: absolute;
-      top: 1rem;
-      right: 1rem;
-      width: 34px;
-      height: 34px;
-      border-radius: 50%;
-      background: rgba(0,0,0,0.35);
-      border: 0.5px solid rgba(255,255,255,0.2);
-      color: #fff;
-      font-size: 15px;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      z-index: 10;
-      transition: background 0.2s;
-      font-family: inherit;
-    }
-
-    .modal-close:hover { background: rgba(0,0,0,0.6); }
-
-    .modal-body {
-      padding: 2.5rem 2rem;
-      display: flex;
-      flex-direction: column;
-      gap: 1.25rem;
-    }
-
-    .modal-tag {
-      font-size: 10px;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      color: var(--text-3);
-    }
-
-    .modal-title {
-      font-family: 'DM Serif Display', serif;
-      font-size: 32px;
-      font-weight: 400;
-      letter-spacing: -0.75px;
-      line-height: 1.15;
-    }
-
-    .modal-desc {
-      font-size: 14px;
-      line-height: 1.75;
-      color: var(--text-2);
-    }
-
-    .modal-meta {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 8px;
-    }
-
-    .meta-item {
-      background: var(--bg-2);
-      border-radius: var(--radius-sm);
-      padding: 10px 14px;
-    }
-
-    .meta-label {
-      font-size: 10px;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      color: var(--text-3);
-      margin-bottom: 4px;
-    }
-
-    .meta-value {
-      font-size: 13px;
-      font-weight: 500;
-      color: var(--text);
-    }
-
-    .deliverables-label {
-      font-size: 10px;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      color: var(--text-3);
-      margin-bottom: 8px;
-    }
-
-    .deliverables {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-    }
-
-    .pill {
-      font-size: 11px;
-      padding: 4px 12px;
-      border-radius: 999px;
-      border: 0.5px solid var(--border-2);
-      color: var(--text-2);
-    }
-
-    .modal-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      font-size: 13px;
-      font-weight: 500;
-      color: var(--text);
-      text-decoration: none;
-      border-bottom: 1px solid var(--border-2);
-      padding-bottom: 3px;
-      width: fit-content;
-      margin-top: auto;
-      transition: border-color 0.2s;
-    }
-
-    .modal-link:hover { border-color: var(--text); }
 
     /* ── ABOUT ── */
     .about {
@@ -724,7 +578,7 @@
     a.card { text-decoration: none; color: inherit; display: block; }
     .card { box-shadow: inset 0 0 0 0.5px var(--border-2); }
 
-    .card-feat-badge {
+    .card-feat-badge, .card-self-badge {
       position: absolute;
       top: 1.1rem;
       right: 1.4rem;
@@ -737,6 +591,12 @@
       padding: 5px 11px;
       border-radius: 999px;
       z-index: 3;
+    }
+
+    .card-self-badge {
+      background: rgba(255,255,255,0.18);
+      border: 0.5px solid rgba(255,255,255,0.3);
+      backdrop-filter: blur(8px);
     }
 
     /* ── UTILS ── */
@@ -764,7 +624,7 @@
 
   <!-- NAV -->
   <nav>
-    <a href="#" class="logo">John <em>Francis</em></a>
+    <a href="/" class="logo">John <em>Francis</em></a>
     <ul class="nav-links">
       <li><a href="#work">Work</a></li>
       <li><a href="#about">About</a></li>
@@ -777,7 +637,7 @@
   <!-- HERO -->
   <section class="hero">
     <div class="hero-text">
-      <p class="hero-eyebrow">Brand &amp; Digital Designer &nbsp;·&nbsp; Bangalore, India</p>
+      <p class="hero-eyebrow">Senior Brand Designer &nbsp;·&nbsp; Bangalore, India</p>
       <h1>Brand thinking,<br><em>digital craft.</em></h1>
       <p>I design brand identities, campaign systems, and digital experiences for tech companies — with 10 years across B2B SaaS and enterprise, from Narvar and Microsoft to Thoughtworks, Cisco and now Ascendion.</p>
       <div class="hero-cta">
@@ -787,9 +647,9 @@
       <div class="availability"><span class="avail-dot"></span> Open to opportunities &mdash; full-time, freelance &amp; fractional</div>
     </div>
     <div class="hero-visual" aria-hidden="true">
-      <img class="hv hv1" src="images/narvar.jpg" alt="" width="1200" height="900" loading="eager" />
-      <img class="hv hv2" src="images/bcc26.jpg" alt="" width="1200" height="900" loading="eager" />
-      <img class="hv hv3" src="images/insider.jpg" alt="" width="1200" height="900" loading="eager" />
+      <img class="hv hv1" src="images/narvar.jpg" alt="Narvar homepage redesign showcasing dark interface with AI platform visualization" width="1200" height="900" loading="eager" />
+      <img class="hv hv2" src="images/bcc26.jpg" alt="BCC'26 festival poster with illustrated raised glass and Bangalore landmarks" width="1200" height="900" loading="eager" />
+      <img class="hv hv3" src="images/insider.jpg" alt="Insider editorial layout featuring bold typography and beauty product photography" width="1200" height="900" loading="eager" />
     </div>
   </section>
 
@@ -811,10 +671,10 @@
   <div id="work" class="section-header">
     <span class="section-label">Selected work &mdash; 9 projects</span>
     <div class="filters">
-      <button class="filter-btn active" onclick="filter('all', this)">All</button>
-      <button class="filter-btn" onclick="filter('brand', this)">Brand</button>
-      <button class="filter-btn" onclick="filter('digital', this)">Digital</button>
-      <button class="filter-btn" onclick="filter('campaign', this)">Campaign</button>
+      <button class="filter-btn active" onclick="filter('all', this)" aria-pressed="true">All</button>
+      <button class="filter-btn" onclick="filter('brand', this)" aria-pressed="false">Brand</button>
+      <button class="filter-btn" onclick="filter('digital', this)" aria-pressed="false">Digital</button>
+      <button class="filter-btn" onclick="filter('campaign', this)" aria-pressed="false">Campaign</button>
     </div>
   </div>
 
@@ -823,7 +683,6 @@
 
     <a class="card hero-span" href="work/narvar.html" data-tags="digital" aria-label="Narvar case study">
       <span class="card-num">01</span>
-      <span class="card-feat-badge">Featured</span>
       <img class="card-img" src="images/narvar.jpg" width="1200" height="900" alt="Narvar — project cover" loading="eager" onerror="this.src='https://placehold.co/600x450/0A1A3F/6FA8FF?text=Narvar'" />
       <div class="card-overlay">
         <div class="card-tag">Ecommerce &middot; Website Redesign</div>
@@ -884,6 +743,7 @@
 
     <a class="card" href="work/bcc26.html" data-tags="brand campaign" aria-label="BCC'26 case study">
       <span class="card-num">07</span>
+      <span class="card-self-badge">Self-initiated</span>
       <img class="card-img" loading="lazy" src="images/bcc26.jpg" width="1200" height="900" alt="BCC'26 — project cover" onerror="this.src='https://placehold.co/600x450/2E7D4F/FFFFFF?text=BCC26'" />
       <div class="card-overlay">
         <div class="card-tag">Events &middot; Brand Campaign</div>
@@ -894,6 +754,7 @@
 
     <a class="card" href="work/epsilon.html" data-tags="digital campaign" aria-label="Epsilon case study">
       <span class="card-num">08</span>
+      <span class="card-self-badge">Self-initiated</span>
       <img class="card-img" loading="lazy" src="images/epsilon.jpg" width="1200" height="900" alt="Epsilon — project cover" onerror="this.src='https://placehold.co/600x450/1A298E/C8D8FF?text=Epsilon'" />
       <div class="card-overlay">
         <div class="card-tag">AdTech &middot; Campaign</div>
@@ -904,6 +765,7 @@
 
     <a class="card" href="work/nile.html" data-tags="digital campaign brand" aria-label="Nile Secure case study">
       <span class="card-num">09</span>
+      <span class="card-self-badge">Self-initiated</span>
       <img class="card-img" loading="lazy" src="images/nile.jpg" width="1200" height="900" alt="Nile Secure — project cover" onerror="this.src='https://placehold.co/600x450/050510/FF3CA0?text=Nile+Secure'" />
       <div class="card-overlay">
         <div class="card-tag">Network Security &middot; Digital &amp; Campaign</div>
@@ -930,6 +792,9 @@
           <span class="skill-tag">Logo Design</span>
           <span class="skill-tag">Typography</span>
           <span class="skill-tag">Colour Strategy</span>
+          <span class="skill-tag">Illustration</span>
+          <span class="skill-tag">Infographics</span>
+          <span class="skill-tag">Packaging</span>
         </div>
       </div>
       <div>
@@ -940,6 +805,8 @@
           <span class="skill-tag">Email Design</span>
           <span class="skill-tag">LinkedIn Creative</span>
           <span class="skill-tag">Editorial Layout</span>
+          <span class="skill-tag">Layout</span>
+          <span class="skill-tag">Visual Hierarchy</span>
         </div>
       </div>
       <div>
@@ -953,13 +820,24 @@
         </div>
       </div>
       <div>
+        <p class="skill-group-label">Production &amp; Leadership</p>
+        <div class="skill-tags">
+          <span class="skill-tag">Print Production</span>
+          <span class="skill-tag">InDesign</span>
+          <span class="skill-tag">Mentoring Designers</span>
+        </div>
+      </div>
+      <div>
         <p class="skill-group-label">Tools</p>
         <div class="skill-tags">
           <span class="skill-tag">Figma</span>
           <span class="skill-tag">After Effects</span>
           <span class="skill-tag">Illustrator</span>
           <span class="skill-tag">Photoshop</span>
+          <span class="skill-tag">InDesign</span>
           <span class="skill-tag">Canva</span>
+          <span class="skill-tag">Keynote</span>
+          <span class="skill-tag">Google Slides</span>
         </div>
       </div>
     </div>
@@ -982,8 +860,12 @@
 
   <script>
     function filter(type, btn) {
-      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.filter-btn').forEach(b => {
+        b.classList.remove('active');
+        b.setAttribute('aria-pressed', 'false');
+      });
       btn.classList.add('active');
+      btn.setAttribute('aria-pressed', 'true');
       document.querySelectorAll('.card').forEach(card => {
         const tags = card.dataset.tags || '';
         card.classList.toggle('hidden', type !== 'all' && !tags.includes(type));
