@@ -77,6 +77,13 @@ footer{padding:1.5rem 2.5rem;border-top:.5px solid var(--border);display:flex;ju
 .pagenav .nt{font-family:'DM Serif Display',serif;font-size:26px;letter-spacing:-.5px}
 .pagenav a:hover .nt{color:var(--text-2)}
 @media (max-width:560px){.pagenav{grid-template-columns:1fr}.pagenav .next{text-align:left;border-left:none;border-top:.5px solid var(--border)}}
+
+html.reveal-on .reveal{opacity:0;transform:translateY(20px);transition:opacity .7s cubic-bezier(.22,.61,.36,1),transform .7s cubic-bezier(.22,.61,.36,1)}
+html.reveal-on .reveal.is-visible{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){html.reveal-on .reveal{opacity:1!important;transform:none!important;transition:none!important}}
+.pagenav a .nt{transition:color .2s ease,transform .25s cubic-bezier(.22,.61,.36,1)}
+.pagenav .next:hover .nt{transform:translateX(5px)}
+.pagenav a:not(.next):hover .nt{transform:translateX(-5px)}
 </style>
 </head>
 <body>
@@ -96,27 +103,27 @@ footer{padding:1.5rem 2.5rem;border-top:.5px solid var(--border);display:flex;ju
   <h1 class="ch-title">Sensecloud</h1>
   <p class="ch-sub">A friendly, grounded brand for SenseAI, an AI procurement agent, in a category full of cold, futuristic AI.</p>
   <div class="ch-meta"><div><div class="ml">Role</div><div class="mv">Brand &amp; Digital Designer</div></div><div><div class="ml">Client</div><div class="mv">Sensecloud</div></div><div><div class="ml">Year</div><div class="mv">2024</div></div><div><div class="ml">Type</div><div class="mv">Brand &amp; Web</div></div></div>
-  <div class="glance"><div><div class="gv">Logo &rarr; web</div><div class="gl">a full brand system</div></div><div><div class="gv">Research-led</div><div class="gl">built against competitors</div></div><div><div class="gv">Favicon to hero</div><div class="gl">one mark at every size</div></div></div>
+  <div class="glance reveal"><div><div class="gv">Logo &rarr; web</div><div class="gl">a full brand system</div></div><div><div class="gv">Research-led</div><div class="gl">built against competitors</div></div><div><div class="gv">Favicon to hero</div><div class="gl">one mark at every size</div></div></div>
 </div>
-<div class="full"><figure class="figure hero"><img src="../images/work/sensecloud/hero.jpg" alt="Sensecloud — Brand &amp; Web" /></figure></div>
-<section class="prose"><h2>The brief</h2><p>SenseAI is an AI agent for procurement, and its promise is clarity: faster, clearer, more confident buying decisions. The brand had to feel the same way. Competitors such as Scoutbee, Coupa, Zycus and GEP lean on futuristic design, iceberg metaphors and abstract AI motifs, which look powerful but often feel distant. SenseAI needed to feel friendly, grounded and easy to trust.</p></section>
-<section class="prose"><h2>What I did</h2><p>Researched the competitor landscape to find where SenseAI could stand apart. Designed the rounded wordmark and the standalone radiant-burst mark. Constructed the mark on a grid and set positive, reversed and dark variants. Designed the hero website (eyebrow, outcome-led headline, low-friction CTA) and a set of social banners. Pulled it together as a visual system and brand guidelines.</p></section>
-<div class="full"><figure class="figure"><img loading="lazy" src="../images/work/sensecloud/proc_research.jpg" alt="Competitor research — Scoutbee, Coupa, Zycus, GEP and others." /></figure><div class=cap>Competitor landscape — the futuristic, abstract norm SenseAI deliberately moves away from.</div></div>
-<section class="prose"><p>A rounded wordmark paired with a radiant burst — a small flash of clarity that reads as a spark of insight. The type stays approachable; the burst carries the intelligence. Together they anchor a clean, confident blue system.</p></section>
-<div class="full"><div class="gal2"><figure class="figure"><img loading="lazy" src="../images/work/sensecloud/proc_logo.jpg" alt="SenseAI logo — overview and design intent." /></figure><figure class="figure"><img loading="lazy" src="../images/work/sensecloud/proc_mark.jpg" alt="The standalone radiant-burst mark." /></figure></div><div class=cap>The wordmark and the standalone burst mark — the intelligence engine at the heart of the product.</div></div>
-<section class="prose"><h2>Anatomy &amp; construction</h2><p>The mark is built on a grid: a central star for the spark of insight breaking through complexity, wrapped in a form that signals movement, repetition and computing power. It&rsquo;s drawn to stay scalable, recognisable and crisp at any size, from a favicon to a hero.</p></section>
-<div class="full"><figure class="figure"><img loading="lazy" src="../images/work/sensecloud/proc_anatomy.jpg" alt="Logo anatomy — construction grid and symbolism." /></figure><div class=cap>Logo anatomy — the star of insight plus the computing-power form, constructed on a grid.</div></div>
-<div class="full"><figure class="figure"><img loading="lazy" src="../images/work/sensecloud/proc_scale.jpg" alt="Wordmark across colour variants." /></figure><div class=cap>Scalable across positive, reversed and dark variants.</div></div>
-<section class="prose"><p>The identity extends to a hero website — laid out around a clear eyebrow, outcome-led headline and low-friction CTA — and a set of social banners, keeping one burst and one voice across every touchpoint.</p></section>
-<div class="full"><figure class="figure"><img loading="lazy" src="../images/work/sensecloud/proc_hero.jpg" alt="Hero website anatomy with annotations." /></figure><div class=cap>Hero anatomy — eyebrow sets context, the heading names three outcomes, the CTA stays low-friction.</div></div>
-<div class="full"><div class="gal2"><figure class="figure"><img loading="lazy" src="../images/work/sensecloud/g2.jpg" alt="Brand applied across layouts." /></figure><figure class="figure"><img loading="lazy" src="../images/work/sensecloud/g4.jpg" alt="Social creative." /></figure></div><div class=cap>The system applied across the website and social banners.</div></div>
-<section class="prose"><h2>Key decisions</h2><p><strong>1. Move away from the category, on purpose.</strong><br>The research showed the category leaning futuristic and abstract. A rounded typeface and a warm, radiant symbol made SenseAI the approachable option, which suits a product sold on clarity.</p><p><strong>2. Split the jobs between type and mark.</strong><br>The rounded wordmark stays friendly; the burst carries the intelligence, a spark of insight breaking through complexity. Together they read as smart without being cold.</p><p><strong>3. A hero that says three outcomes and asks for little.</strong><br>The eyebrow ("No dashboards. No digging. Just ask.") sets context, the headline names three outcomes (fast, clear, confident), and "Try a live demo" keeps the first step low-friction.</p></section><section class="prose"><h2>Result</h2><p>A complete brand system (research, mark, construction, website and social) that gives an AI procurement product the clear, confident presence its promise depends on.</p></section>
-<div class="prose">
+<div class="full reveal"><figure class="figure hero"><img src="../images/work/sensecloud/hero.jpg" alt="Sensecloud — Brand &amp; Web" /></figure></div>
+<section class="prose reveal"><h2>The brief</h2><p>SenseAI is an AI agent for procurement, and its promise is clarity: faster, clearer, more confident buying decisions. The brand had to feel the same way. Competitors such as Scoutbee, Coupa, Zycus and GEP lean on futuristic design, iceberg metaphors and abstract AI motifs, which look powerful but often feel distant. SenseAI needed to feel friendly, grounded and easy to trust.</p></section>
+<section class="prose reveal"><h2>What I did</h2><p>Researched the competitor landscape to find where SenseAI could stand apart. Designed the rounded wordmark and the standalone radiant-burst mark. Constructed the mark on a grid and set positive, reversed and dark variants. Designed the hero website (eyebrow, outcome-led headline, low-friction CTA) and a set of social banners. Pulled it together as a visual system and brand guidelines.</p></section>
+<div class="full reveal"><figure class="figure"><img loading="lazy" src="../images/work/sensecloud/proc_research.jpg" alt="Competitor research — Scoutbee, Coupa, Zycus, GEP and others." /></figure><div class=cap>Competitor landscape — the futuristic, abstract norm SenseAI deliberately moves away from.</div></div>
+<section class="prose reveal"><p>A rounded wordmark paired with a radiant burst — a small flash of clarity that reads as a spark of insight. The type stays approachable; the burst carries the intelligence. Together they anchor a clean, confident blue system.</p></section>
+<div class="full reveal"><div class="gal2"><figure class="figure"><img loading="lazy" src="../images/work/sensecloud/proc_logo.jpg" alt="SenseAI logo — overview and design intent." /></figure><figure class="figure"><img loading="lazy" src="../images/work/sensecloud/proc_mark.jpg" alt="The standalone radiant-burst mark." /></figure></div><div class=cap>The wordmark and the standalone burst mark — the intelligence engine at the heart of the product.</div></div>
+<section class="prose reveal"><h2>Anatomy &amp; construction</h2><p>The mark is built on a grid: a central star for the spark of insight breaking through complexity, wrapped in a form that signals movement, repetition and computing power. It&rsquo;s drawn to stay scalable, recognisable and crisp at any size, from a favicon to a hero.</p></section>
+<div class="full reveal"><figure class="figure"><img loading="lazy" src="../images/work/sensecloud/proc_anatomy.jpg" alt="Logo anatomy — construction grid and symbolism." /></figure><div class=cap>Logo anatomy — the star of insight plus the computing-power form, constructed on a grid.</div></div>
+<div class="full reveal"><figure class="figure"><img loading="lazy" src="../images/work/sensecloud/proc_scale.jpg" alt="Wordmark across colour variants." /></figure><div class=cap>Scalable across positive, reversed and dark variants.</div></div>
+<section class="prose reveal"><p>The identity extends to a hero website — laid out around a clear eyebrow, outcome-led headline and low-friction CTA — and a set of social banners, keeping one burst and one voice across every touchpoint.</p></section>
+<div class="full reveal"><figure class="figure"><img loading="lazy" src="../images/work/sensecloud/proc_hero.jpg" alt="Hero website anatomy with annotations." /></figure><div class=cap>Hero anatomy — eyebrow sets context, the heading names three outcomes, the CTA stays low-friction.</div></div>
+<div class="full reveal"><div class="gal2"><figure class="figure"><img loading="lazy" src="../images/work/sensecloud/g2.jpg" alt="Brand applied across layouts." /></figure><figure class="figure"><img loading="lazy" src="../images/work/sensecloud/g4.jpg" alt="Social creative." /></figure></div><div class=cap>The system applied across the website and social banners.</div></div>
+<section class="prose reveal"><h2>Key decisions</h2><p><strong>1. Move away from the category, on purpose.</strong><br>The research showed the category leaning futuristic and abstract. A rounded typeface and a warm, radiant symbol made SenseAI the approachable option, which suits a product sold on clarity.</p><p><strong>2. Split the jobs between type and mark.</strong><br>The rounded wordmark stays friendly; the burst carries the intelligence, a spark of insight breaking through complexity. Together they read as smart without being cold.</p><p><strong>3. A hero that says three outcomes and asks for little.</strong><br>The eyebrow ("No dashboards. No digging. Just ask.") sets context, the headline names three outcomes (fast, clear, confident), and "Try a live demo" keeps the first step low-friction.</p></section><section class="prose reveal"><h2>Result</h2><p>A complete brand system (research, mark, construction, website and social) that gives an AI procurement product the clear, confident presence its promise depends on.</p></section>
+<div class="prose reveal">
   <h2>Deliverables</h2>
   <div class="delv"><span class="pill">Logo &amp; Wordmark</span><span class="pill">Hero Website</span><span class="pill">Social Creative</span><span class="pill">Visual System</span><span class="pill">Brand Guidelines</span></div>
   <a class="ext" href="https://www.figma.com/design/vtWSmOrVz3SA2iAHHGQDVM/Sensecloud" target="_blank" rel="noopener">View in Figma &rarr;</a>
 </div>
-<nav class="pagenav">
+<nav class="pagenav reveal">
   <a class="prev" href="semicab.html"><div class="nl">&larr; Previous</div><div class="nt">SemiCab</div></a>
   <a class="next" href="bcc26.html"><div class="nl">Next &rarr;</div><div class="nt">BCC&rsquo;26</div></a>
 </nav>
@@ -128,5 +135,14 @@ footer{padding:1.5rem 2.5rem;border-top:.5px solid var(--border);display:flex;ju
   </div>
 </section>
 <footer><span>&copy; 2026 John Francis</span><span>Bangalore, India &nbsp;·&nbsp; <a href="mailto:johnfrancisa548@gmail.com" style="color:inherit;text-decoration:none">johnfrancisa548@gmail.com</a> &nbsp;·&nbsp; <a href="/John-Francis-Resume.pdf" target="_blank" rel="noopener" style="color:inherit;text-decoration:none">Resume</a> &nbsp;·&nbsp; <a href="https://www.linkedin.com/in/john-francis-amalanathan-18835847/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none">LinkedIn</a></span></footer>
+<script>
+(function(){var r=document.documentElement;
+if(!('IntersectionObserver' in window))return;
+if(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+r.classList.add('reveal-on');
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('is-visible');io.unobserve(e.target);}});},{rootMargin:'0px 0px -8% 0px',threshold:0.08});
+function start(){document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});}
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',start);else start();})();
+</script>
 </body>
 </html>

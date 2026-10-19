@@ -77,6 +77,13 @@ footer{padding:1.5rem 2.5rem;border-top:.5px solid var(--border);display:flex;ju
 .pagenav .nt{font-family:'DM Serif Display',serif;font-size:26px;letter-spacing:-.5px}
 .pagenav a:hover .nt{color:var(--text-2)}
 @media (max-width:560px){.pagenav{grid-template-columns:1fr}.pagenav .next{text-align:left;border-left:none;border-top:.5px solid var(--border)}}
+
+html.reveal-on .reveal{opacity:0;transform:translateY(20px);transition:opacity .7s cubic-bezier(.22,.61,.36,1),transform .7s cubic-bezier(.22,.61,.36,1)}
+html.reveal-on .reveal.is-visible{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){html.reveal-on .reveal{opacity:1!important;transform:none!important;transition:none!important}}
+.pagenav a .nt{transition:color .2s ease,transform .25s cubic-bezier(.22,.61,.36,1)}
+.pagenav .next:hover .nt{transform:translateX(5px)}
+.pagenav a:not(.next):hover .nt{transform:translateX(-5px)}
 </style>
 </head>
 <body>
@@ -96,27 +103,27 @@ footer{padding:1.5rem 2.5rem;border-top:.5px solid var(--border);display:flex;ju
   <h1 class="ch-title">SemiCab</h1>
   <p class="ch-sub">A 17-slide pitch that turns a dense, numbers-heavy freight model into one story an audience can follow and believe.</p>
   <div class="ch-meta"><div><div class="ml">Role</div><div class="mv">Brand Designer</div></div><div><div class="ml">Client</div><div class="mv">SemiCab</div></div><div><div class="ml">Year</div><div class="mv">2024</div></div><div><div class="ml">Type</div><div class="mv">Pitch Narrative</div></div></div>
-  <div class="glance"><div><div class="gv">17 slides</div><div class="gl">problem to proof</div></div><div><div class="gv">1 visual metaphor</div><div class="gl">the "Network Lens"</div></div><div><div class="gv">One point per slide</div><div class="gl">so the argument builds</div></div></div>
+  <div class="glance reveal"><div><div class="gv">17 slides</div><div class="gl">problem to proof</div></div><div><div class="gv">1 visual metaphor</div><div class="gl">the "Network Lens"</div></div><div><div class="gv">One point per slide</div><div class="gl">so the argument builds</div></div></div>
 </div>
-<div class="full"><figure class="figure hero"><img src="../images/work/semicab/hero.jpg" alt="SemiCab — Pitch Narrative" /></figure></div>
-<section class="prose"><h2>The brief</h2><p>SemiCab runs a collaborative, AI-driven trucking network. Freight is dense and numbers-heavy, and a deck about it can easily drown in statistics. The job was to find the through-line, problem then proof, and give it a bold, confident visual voice that holds attention from the first slide to the last.</p></section>
-<section class="prose"><h2>What I did</h2><p>Designed the 17-slide narrative: the problem, the size of the opportunity, the positioning, the proof. Created the "Network Lens" visual metaphor (orange curved paths, white nodes) that threads through the deck. Designed the data storytelling slides, including traditional vs. SemiCab network comparisons. Built a full-page infographic, "From Local Optimisation to Network Efficiency". Set the typographic system: bold orange on black, data treated as a design element.</p></section>
-<div class="full"><div class="gal2"><figure class="figure"><img loading="lazy" src="../images/work/semicab/g1.jpg" alt="Opening the problem — truckload transportation is broken." /></figure><figure class="figure"><img loading="lazy" src="../images/work/semicab/g2.jpg" alt="Framing the scale of the opportunity." /></figure></div><div class=cap>Opening the problem — truckload transportation is broken. Framing the scale of the opportunity.</div></div>
-<section class="prose"><h2>The opportunity</h2><p>Early slides size the prize in numbers that land — 10% lower transportation spend, 70% fewer empty miles, 35% better on-time delivery — then sharpen the positioning: SemiCab isn&rsquo;t a smarter digital broker, it&rsquo;s a different model entirely.</p></section>
-<div class="full"><div class="gal2"><figure class="figure"><img loading="lazy" src="../images/work/semicab/opportunity.jpg" alt="What if companies could — the opportunity in numbers." /></figure><figure class="figure"><img loading="lazy" src="../images/work/semicab/positioning.jpg" alt="Positioning — not a smarter digital broker." /></figure></div><div class=cap>Sizing the opportunity, then staking out the positioning.</div></div>
-<section class="prose"><p>The deck is anchored by one idea — the &ldquo;Network Lens.&rdquo; Orange curved shapes act as dynamic paths and white circles as nodes; flowing compositions suggest the looped, connected network itself. It gives a dense logistics story a single, repeatable visual that balances efficiency with movement.</p></section>
-<div class="full"><figure class="figure"><img loading="lazy" src="../images/work/semicab/metaphor.jpg" alt="Core visual metaphor — the Network Lens." /></figure><div class=cap>The core visual metaphor — the "Network Lens" that threads the whole deck. <em>Note:</em> Figures shown (10% lower transportation spend, 70% fewer empty miles, 35% better on-time delivery) are SemiCab's platform claims, not project results — the &ldquo;Network Lens&rdquo; that threads the whole deck.</div></div>
-<div class="full"><div class="gal2"><figure class="figure"><img loading="lazy" src="../images/work/semicab/g3.jpg" alt="Data storytelling — the network effect, made visual." /></figure><figure class="figure"><img loading="lazy" src="../images/work/semicab/g4.jpg" alt="Proof — utilisation and efficiency gains." /></figure></div><div class=cap>Data storytelling — the network effect, made visual, and the proof.</div></div>
-<section class="prose"><p>A full-page infographic carries the core argument on its own: the shift from local optimisation — rate negotiation, lane-by-lane tweaks, TMS execution — up to true network-level planning, drawn as one connected system.</p></section>
-<div class="full"><figure class="figure"><img loading="lazy" src="../images/work/semicab/infographic.jpg" alt="Infographic — from local optimization to network efficiency." /></figure><div class=cap>&ldquo;From Local Optimization to Network Efficiency&rdquo; — the argument as a single infographic.</div></div>
-<section class="prose"><p>Bold orange on black, confident typography, and data treated as a design element rather than a footnote. Each slide makes one point and hands off to the next, so the argument builds instead of piling up.</p></section>
-<section class="prose"><h2>Result</h2><p>A pitch narrative that reads with momentum: a complex, collaborative logistics story made scannable, credible and distinctly SemiCab.</p></section>
-<div class="prose">
+<div class="full reveal"><figure class="figure hero"><img src="../images/work/semicab/hero.jpg" alt="SemiCab — Pitch Narrative" /></figure></div>
+<section class="prose reveal"><h2>The brief</h2><p>SemiCab runs a collaborative, AI-driven trucking network. Freight is dense and numbers-heavy, and a deck about it can easily drown in statistics. The job was to find the through-line, problem then proof, and give it a bold, confident visual voice that holds attention from the first slide to the last.</p></section>
+<section class="prose reveal"><h2>What I did</h2><p>Designed the 17-slide narrative: the problem, the size of the opportunity, the positioning, the proof. Created the "Network Lens" visual metaphor (orange curved paths, white nodes) that threads through the deck. Designed the data storytelling slides, including traditional vs. SemiCab network comparisons. Built a full-page infographic, "From Local Optimisation to Network Efficiency". Set the typographic system: bold orange on black, data treated as a design element.</p></section>
+<div class="full reveal"><div class="gal2"><figure class="figure"><img loading="lazy" src="../images/work/semicab/g1.jpg" alt="Opening the problem — truckload transportation is broken." /></figure><figure class="figure"><img loading="lazy" src="../images/work/semicab/g2.jpg" alt="Framing the scale of the opportunity." /></figure></div><div class=cap>Opening the problem — truckload transportation is broken. Framing the scale of the opportunity.</div></div>
+<section class="prose reveal"><h2>The opportunity</h2><p>Early slides size the prize in numbers that land — 10% lower transportation spend, 70% fewer empty miles, 35% better on-time delivery — then sharpen the positioning: SemiCab isn&rsquo;t a smarter digital broker, it&rsquo;s a different model entirely.</p></section>
+<div class="full reveal"><div class="gal2"><figure class="figure"><img loading="lazy" src="../images/work/semicab/opportunity.jpg" alt="What if companies could — the opportunity in numbers." /></figure><figure class="figure"><img loading="lazy" src="../images/work/semicab/positioning.jpg" alt="Positioning — not a smarter digital broker." /></figure></div><div class=cap>Sizing the opportunity, then staking out the positioning.</div></div>
+<section class="prose reveal"><p>The deck is anchored by one idea — the &ldquo;Network Lens.&rdquo; Orange curved shapes act as dynamic paths and white circles as nodes; flowing compositions suggest the looped, connected network itself. It gives a dense logistics story a single, repeatable visual that balances efficiency with movement.</p></section>
+<div class="full reveal"><figure class="figure"><img loading="lazy" src="../images/work/semicab/metaphor.jpg" alt="Core visual metaphor — the Network Lens." /></figure><div class=cap>The core visual metaphor — the "Network Lens" that threads the whole deck. <em>Note:</em> Figures shown (10% lower transportation spend, 70% fewer empty miles, 35% better on-time delivery) are SemiCab's platform claims, not project results — the &ldquo;Network Lens&rdquo; that threads the whole deck.</div></div>
+<div class="full reveal"><div class="gal2"><figure class="figure"><img loading="lazy" src="../images/work/semicab/g3.jpg" alt="Data storytelling — the network effect, made visual." /></figure><figure class="figure"><img loading="lazy" src="../images/work/semicab/g4.jpg" alt="Proof — utilisation and efficiency gains." /></figure></div><div class=cap>Data storytelling — the network effect, made visual, and the proof.</div></div>
+<section class="prose reveal"><p>A full-page infographic carries the core argument on its own: the shift from local optimisation — rate negotiation, lane-by-lane tweaks, TMS execution — up to true network-level planning, drawn as one connected system.</p></section>
+<div class="full reveal"><figure class="figure"><img loading="lazy" src="../images/work/semicab/infographic.jpg" alt="Infographic — from local optimization to network efficiency." /></figure><div class=cap>&ldquo;From Local Optimization to Network Efficiency&rdquo; — the argument as a single infographic.</div></div>
+<section class="prose reveal"><p>Bold orange on black, confident typography, and data treated as a design element rather than a footnote. Each slide makes one point and hands off to the next, so the argument builds instead of piling up.</p></section>
+<section class="prose reveal"><h2>Result</h2><p>A pitch narrative that reads with momentum: a complex, collaborative logistics story made scannable, credible and distinctly SemiCab.</p></section>
+<div class="prose reveal">
   <h2>Deliverables</h2>
   <div class="delv"><span class="pill">Pitch Deck</span><span class="pill">Data Storytelling</span><span class="pill">Infographics</span><span class="pill">Typographic System</span><span class="pill">Narrative Design</span></div>
   <a class="ext" href="https://www.figma.com/design/bxric3w0RPjrtAxn7NHTjm/Semi-Cab" target="_blank" rel="noopener">View in Figma &rarr;</a>
 </div>
-<nav class="pagenav">
+<nav class="pagenav reveal">
   <a class="prev" href="gathers.html"><div class="nl">&larr; Previous</div><div class="nt">Gathers for Narvar</div></a>
   <a class="next" href="sensecloud.html"><div class="nl">Next &rarr;</div><div class="nt">Sensecloud</div></a>
 </nav>
@@ -128,5 +135,14 @@ footer{padding:1.5rem 2.5rem;border-top:.5px solid var(--border);display:flex;ju
   </div>
 </section>
 <footer><span>&copy; 2026 John Francis</span><span>Bangalore, India &nbsp;·&nbsp; <a href="mailto:johnfrancisa548@gmail.com" style="color:inherit;text-decoration:none">johnfrancisa548@gmail.com</a> &nbsp;·&nbsp; <a href="/John-Francis-Resume.pdf" target="_blank" rel="noopener" style="color:inherit;text-decoration:none">Resume</a> &nbsp;·&nbsp; <a href="https://www.linkedin.com/in/john-francis-amalanathan-18835847/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none">LinkedIn</a></span></footer>
+<script>
+(function(){var r=document.documentElement;
+if(!('IntersectionObserver' in window))return;
+if(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+r.classList.add('reveal-on');
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('is-visible');io.unobserve(e.target);}});},{rootMargin:'0px 0px -8% 0px',threshold:0.08});
+function start(){document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});}
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',start);else start();})();
+</script>
 </body>
 </html>

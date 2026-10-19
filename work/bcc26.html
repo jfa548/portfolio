@@ -76,6 +76,13 @@ footer{padding:1.5rem 2.5rem;border-top:.5px solid var(--border);display:flex;ju
 .pagenav .nt{font-family:'DM Serif Display',serif;font-size:26px;letter-spacing:-.5px}
 .pagenav a:hover .nt{color:var(--text-2)}
 @media (max-width:560px){.pagenav{grid-template-columns:1fr}.pagenav .next{text-align:left;border-left:none;border-top:.5px solid var(--border)}}
+
+html.reveal-on .reveal{opacity:0;transform:translateY(20px);transition:opacity .7s cubic-bezier(.22,.61,.36,1),transform .7s cubic-bezier(.22,.61,.36,1)}
+html.reveal-on .reveal.is-visible{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){html.reveal-on .reveal{opacity:1!important;transform:none!important;transition:none!important}}
+.pagenav a .nt{transition:color .2s ease,transform .25s cubic-bezier(.22,.61,.36,1)}
+.pagenav .next:hover .nt{transform:translateX(5px)}
+.pagenav a:not(.next):hover .nt{transform:translateX(-5px)}
 </style>
 </head>
 <body>
@@ -95,28 +102,28 @@ footer{padding:1.5rem 2.5rem;border-top:.5px solid var(--border);display:flex;ju
   <h1 class="ch-title">BCC’26</h1>
   <p class="ch-sub">Six complete poster worlds for a Bangalore craft-beer crawl, narrowed to one screen-print hero in English and Kannada.</p>
   <div class="ch-meta"><div><div class="ml">Role</div><div class="mv">Brand Designer</div></div><div><div class="ml">Client</div><div class="mv">Self-initiated concept</div></div><div><div class="ml">Year</div><div class="mv">2026</div></div><div><div class="ml">Type</div><div class="mv">Concept Showcase</div></div></div>
-  <div class="glance"><div><div class="gv">6 directions</div><div class="gl">each a complete three-poster set</div></div><div><div class="gv">Moodboard → final</div><div class="gl">the full poster process</div></div><div><div class="gv">Bilingual</div><div class="gl">EN + Kannada</div></div></div>
+  <div class="glance reveal"><div><div class="gv">6 directions</div><div class="gl">each a complete three-poster set</div></div><div><div class="gv">Moodboard → final</div><div class="gl">the full poster process</div></div><div><div class="gv">Bilingual</div><div class="gl">EN + Kannada</div></div></div>
 </div>
-<div class="full"><figure class="figure hero"><img src="../images/work/bcc26/hero.jpg" alt="BCC’26 — Concept Showcase" /></figure></div>
-<section class="prose"><h2>The brief</h2><p>The Bangalore Craft Beer Crawl 2026 is a 30-day, 15-brewery, 8-city campaign. I set myself the brief of showing how it could look: loud and festive like the best international beer-festival posters, but rooted in Bangalore and readable to a local audience in both English and Kannada.</p></section>
-<section class="prose"><h2>What I did</h2><p>Built a moodboard of international beer-festival posters to set the tone: illustrated, screen-print, high energy. Developed six directions, each a complete three-poster set: illustrated festival, retro-print vintage, illustrated cityscape, vintage lockup, hand-drawn crowd and chrome-type. Explored a painterly, mural-scale route of raised glasses against Bangalore landmarks and fireworks. Resolved it into a two-colour screen-print hero poster with bilingual lockups.</p><section class="prose"><h2>Key decisions</h2><p><strong>1. Finished worlds, not sketches.</strong><br>Each direction is a full three-poster set with its own type, palette and illustration logic. That makes the choice between real options, the way a client would actually need to judge them.</p><p><strong>2. Two colours, screen-print style.</strong><br>Blue and orange keep the final poster bold from across a room and nod to the genre's screen-print heritage.</p><p><strong>3. Bangalore, not "a city".</strong><br>Landmarks, autos and bunting, plus Kannada alongside English, make it unmistakably local. That sets it apart from generic festival posters.</p></section>
-<div class="full"><figure class="figure"><img loading="lazy" src="../images/work/bcc26/mood.jpg" alt="Moodboard — references that set the tone before any design begins." /></figure><div class=cap>Moodboard — references that set the tone before any design begins.</div></div>
-<section class="prose"><p>Six directions, each a complete three-poster set: illustrated festival, retro-print vintage, hand-drawn crowd, chrome-type, and bilingual lockups. Every route carries its own type, palette and illustration logic, so the choice is between finished worlds rather than rough sketches.</p></section>
-<div class="full"><div class="gal2"><figure class="figure"><img loading="lazy" src="../images/work/bcc26/c1.jpg" alt="Illustrated festival direction." /></figure><figure class="figure"><img loading="lazy" src="../images/work/bcc26/c2.jpg" alt="Retro-print, vintage craft direction." /></figure></div><div class=cap>Illustrated festival direction. Retro-print, vintage craft direction.</div></div>
-<div class="full"><div class="gal2"><figure class="figure"><img loading="lazy" src="../images/work/bcc26/c3.jpg" alt="Illustrated cityscape direction." /></figure><figure class="figure"><img loading="lazy" src="../images/work/bcc26/c4.jpg" alt="Vintage and BCC&#x27;26 lockup direction." /></figure></div><div class=cap>Illustrated cityscape direction. Vintage and BCC&#x27;26 lockup direction.</div></div>
-<div class="full"><div class="gal2"><figure class="figure"><img loading="lazy" src="../images/work/bcc26/c5.jpg" alt="Hand-drawn crowd and glass direction." /></figure><figure class="figure"><img loading="lazy" src="../images/work/bcc26/c6.jpg" alt="Chrome-type and black-and-white direction." /></figure></div><div class=cap>Hand-drawn crowd and glass direction. Chrome-type and black-and-white direction.</div></div>
-<section class="prose"><h2>A painterly direction</h2><p>One route goes fully illustrated — a warm, large-scale painterly scene of raised glasses against Bangalore landmarks and fireworks, built to work as a mural-sized hero.</p></section>
-<div class="full"><figure class="figure"><img loading="lazy" src="../images/work/bcc26/mural1.jpg" alt="Painterly hero — raised glasses over the city." /></figure><div class=cap>Painterly hero — raised glasses over the city.</div></div>
-<div class="full"><figure class="figure"><img loading="lazy" src="../images/work/bcc26/mural2.jpg" alt="A second painterly treatment with festival fireworks." /></figure><div class=cap>A second painterly treatment with festival fireworks.</div></div>
-<section class="prose"><h2>The poster</h2><p>The directions resolve into a two-colour, screen-print hero poster: a raised glass framed by Bangalore landmarks, autos and bunting, with bilingual English and Kannada lockups and one bold message — 24–25 October 2026.</p></section>
-<div class="full"><div class="gal2"><figure class="figure"><img loading="lazy" src="../images/work/bcc26/final1.jpg" alt="Final poster direction." /></figure><figure class="figure"><img loading="lazy" src="../images/work/bcc26/final2.jpg" alt="Chrome-type poster variants." /></figure></div><div class=cap>Final poster direction. Chrome-type poster variants.</div></div>
-<section class="prose"><h2>Result</h2><p>A concept, but a complete one. It shows the whole arc of poster design, from references to six fully realised directions to one confident final, and a feel for local, bilingual identity. It's also the most striking visual work on the site, which makes it a strong hook for graphic designer roles.</p></section>
-<div class="prose">
+<div class="full reveal"><figure class="figure hero"><img src="../images/work/bcc26/hero.jpg" alt="BCC’26 — Concept Showcase" /></figure></div>
+<section class="prose reveal"><h2>The brief</h2><p>The Bangalore Craft Beer Crawl 2026 is a 30-day, 15-brewery, 8-city campaign. I set myself the brief of showing how it could look: loud and festive like the best international beer-festival posters, but rooted in Bangalore and readable to a local audience in both English and Kannada.</p></section>
+<section class="prose reveal"><h2>What I did</h2><p>Built a moodboard of international beer-festival posters to set the tone: illustrated, screen-print, high energy. Developed six directions, each a complete three-poster set: illustrated festival, retro-print vintage, illustrated cityscape, vintage lockup, hand-drawn crowd and chrome-type. Explored a painterly, mural-scale route of raised glasses against Bangalore landmarks and fireworks. Resolved it into a two-colour screen-print hero poster with bilingual lockups.</p><section class="prose reveal"><h2>Key decisions</h2><p><strong>1. Finished worlds, not sketches.</strong><br>Each direction is a full three-poster set with its own type, palette and illustration logic. That makes the choice between real options, the way a client would actually need to judge them.</p><p><strong>2. Two colours, screen-print style.</strong><br>Blue and orange keep the final poster bold from across a room and nod to the genre's screen-print heritage.</p><p><strong>3. Bangalore, not "a city".</strong><br>Landmarks, autos and bunting, plus Kannada alongside English, make it unmistakably local. That sets it apart from generic festival posters.</p></section>
+<div class="full reveal"><figure class="figure"><img loading="lazy" src="../images/work/bcc26/mood.jpg" alt="Moodboard — references that set the tone before any design begins." /></figure><div class=cap>Moodboard — references that set the tone before any design begins.</div></div>
+<section class="prose reveal"><p>Six directions, each a complete three-poster set: illustrated festival, retro-print vintage, hand-drawn crowd, chrome-type, and bilingual lockups. Every route carries its own type, palette and illustration logic, so the choice is between finished worlds rather than rough sketches.</p></section>
+<div class="full reveal"><div class="gal2"><figure class="figure"><img loading="lazy" src="../images/work/bcc26/c1.jpg" alt="Illustrated festival direction." /></figure><figure class="figure"><img loading="lazy" src="../images/work/bcc26/c2.jpg" alt="Retro-print, vintage craft direction." /></figure></div><div class=cap>Illustrated festival direction. Retro-print, vintage craft direction.</div></div>
+<div class="full reveal"><div class="gal2"><figure class="figure"><img loading="lazy" src="../images/work/bcc26/c3.jpg" alt="Illustrated cityscape direction." /></figure><figure class="figure"><img loading="lazy" src="../images/work/bcc26/c4.jpg" alt="Vintage and BCC&#x27;26 lockup direction." /></figure></div><div class=cap>Illustrated cityscape direction. Vintage and BCC&#x27;26 lockup direction.</div></div>
+<div class="full reveal"><div class="gal2"><figure class="figure"><img loading="lazy" src="../images/work/bcc26/c5.jpg" alt="Hand-drawn crowd and glass direction." /></figure><figure class="figure"><img loading="lazy" src="../images/work/bcc26/c6.jpg" alt="Chrome-type and black-and-white direction." /></figure></div><div class=cap>Hand-drawn crowd and glass direction. Chrome-type and black-and-white direction.</div></div>
+<section class="prose reveal"><h2>A painterly direction</h2><p>One route goes fully illustrated — a warm, large-scale painterly scene of raised glasses against Bangalore landmarks and fireworks, built to work as a mural-sized hero.</p></section>
+<div class="full reveal"><figure class="figure"><img loading="lazy" src="../images/work/bcc26/mural1.jpg" alt="Painterly hero — raised glasses over the city." /></figure><div class=cap>Painterly hero — raised glasses over the city.</div></div>
+<div class="full reveal"><figure class="figure"><img loading="lazy" src="../images/work/bcc26/mural2.jpg" alt="A second painterly treatment with festival fireworks." /></figure><div class=cap>A second painterly treatment with festival fireworks.</div></div>
+<section class="prose reveal"><h2>The poster</h2><p>The directions resolve into a two-colour, screen-print hero poster: a raised glass framed by Bangalore landmarks, autos and bunting, with bilingual English and Kannada lockups and one bold message — 24–25 October 2026.</p></section>
+<div class="full reveal"><div class="gal2"><figure class="figure"><img loading="lazy" src="../images/work/bcc26/final1.jpg" alt="Final poster direction." /></figure><figure class="figure"><img loading="lazy" src="../images/work/bcc26/final2.jpg" alt="Chrome-type poster variants." /></figure></div><div class=cap>Final poster direction. Chrome-type poster variants.</div></div>
+<section class="prose reveal"><h2>Result</h2><p>A concept, but a complete one. It shows the whole arc of poster design, from references to six fully realised directions to one confident final, and a feel for local, bilingual identity. It's also the most striking visual work on the site, which makes it a strong hook for graphic designer roles.</p></section>
+<div class="prose reveal">
   <h2>Deliverables</h2>
   <div class="delv"><span class="pill">Poster Concepts</span><span class="pill">Moodboard</span><span class="pill">Illustration Direction</span><span class="pill">Bilingual Typography</span><span class="pill">Final Poster</span></div>
   <a class="ext" href="../projects/bcc26-poster-concepts.pdf" target="_blank" rel="noopener">View full PDF (19 MB) &rarr;</a>
 </div>
-<nav class="pagenav">
+<nav class="pagenav reveal">
   <a class="prev" href="sensecloud.html"><div class="nl">&larr; Previous</div><div class="nt">Sensecloud</div></a>
   <a class="next" href="epsilon.html"><div class="nl">Next &rarr;</div><div class="nt">Epsilon</div></a>
 </nav>
@@ -128,5 +135,14 @@ footer{padding:1.5rem 2.5rem;border-top:.5px solid var(--border);display:flex;ju
   </div>
 </section>
 <footer><span>&copy; 2026 John Francis</span><span>Bangalore, India &nbsp;·&nbsp; <a href="mailto:johnfrancisa548@gmail.com" style="color:inherit;text-decoration:none">johnfrancisa548@gmail.com</a> &nbsp;·&nbsp; <a href="/John-Francis-Resume.pdf" target="_blank" rel="noopener" style="color:inherit;text-decoration:none">Resume</a> &nbsp;·&nbsp; <a href="https://www.linkedin.com/in/john-francis-amalanathan-18835847/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none">LinkedIn</a></span></footer>
+<script>
+(function(){var r=document.documentElement;
+if(!('IntersectionObserver' in window))return;
+if(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+r.classList.add('reveal-on');
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('is-visible');io.unobserve(e.target);}});},{rootMargin:'0px 0px -8% 0px',threshold:0.08});
+function start(){document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});}
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',start);else start();})();
+</script>
 </body>
 </html>

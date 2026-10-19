@@ -77,6 +77,13 @@ footer{padding:1.5rem 2.5rem;border-top:.5px solid var(--border);display:flex;ju
 .pagenav .nt{font-family:'DM Serif Display',serif;font-size:26px;letter-spacing:-.5px}
 .pagenav a:hover .nt{color:var(--text-2)}
 @media (max-width:560px){.pagenav{grid-template-columns:1fr}.pagenav .next{text-align:left;border-left:none;border-top:.5px solid var(--border)}}
+
+html.reveal-on .reveal{opacity:0;transform:translateY(20px);transition:opacity .7s cubic-bezier(.22,.61,.36,1),transform .7s cubic-bezier(.22,.61,.36,1)}
+html.reveal-on .reveal.is-visible{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){html.reveal-on .reveal{opacity:1!important;transform:none!important;transition:none!important}}
+.pagenav a .nt{transition:color .2s ease,transform .25s cubic-bezier(.22,.61,.36,1)}
+.pagenav .next:hover .nt{transform:translateX(5px)}
+.pagenav a:not(.next):hover .nt{transform:translateX(-5px)}
 </style>
 </head>
 <body>
@@ -96,20 +103,20 @@ footer{padding:1.5rem 2.5rem;border-top:.5px solid var(--border);display:flex;ju
   <h1 class="ch-title">Gathers for Narvar</h1>
   <p class="ch-sub">A custom patch bar that swapped a generic giveaway for a keepsake guests designed themselves, on the spot.</p>
   <div class="ch-meta"><div><div class="ml">Role</div><div class="mv">Brand &amp; Event Designer</div></div><div><div class="ml">Client</div><div class="mv">Narvar (Gathers, San Diego)</div></div><div><div class="ml">Year</div><div class="mv">2025</div></div><div><div class="ml">Type</div><div class="mv">Event Merchandise</div></div></div>
-  <div class="glance"><div><div class="gv">11 patch designs</div><div class="gl">4 Narvar + 7 San Diego</div></div><div><div class="gv">2-step bar</div><div class="gl">explained on one sign</div></div><div><div class="gv">Built on-site</div><div class="gl">applied live</div></div></div>
+  <div class="glance reveal"><div><div class="gv">11 patch designs</div><div class="gl">4 Narvar + 7 San Diego</div></div><div><div class="gv">2-step bar</div><div class="gl">explained on one sign</div></div><div><div class="gv">Built on-site</div><div class="gl">applied live</div></div></div>
 </div>
-<div class="full"><figure class="figure hero"><img src="../images/work/gathers/hero.jpg" alt="Gathers for Narvar — Event Merchandise" /></figure></div>
-<section class="prose"><h2>The brief</h2><p>Narvar was at the Gathers event in San Diego and wanted something better than another branded giveaway that ends up in a drawer. The answer was a patch bar: guests build their own keepsake. It had to be clearly Narvar, feel specific to San Diego, and be simple enough to understand at a glance in a busy room.</p></section>
-<section class="prose"><h2>What I did</h2><p>Designed four Narvar logo patches for the first pick. Designed seven San Diego city patches: stamps, a retro badge and a script lockup. Designed the patch bar signage that explains the two-step choice on one clear sign. Created the event branding around the experience.</p></section>
-<section class="prose"><h2>Key decisions</h2><p><strong>1. Two steps, one sign.</strong><br>In a crowded room, nobody reads instructions. Splitting the choice into "pick your Narvar patch, then pick a San Diego patch" and putting both on one sign made it obvious in seconds.</p><p><strong>2. Brand first, place second.</strong><br>The Narvar patch always comes first and has a fixed spot (upper left sleeve), so every finished piece carries the brand. The city patch is the fun, personal part, placed anywhere the guest likes.</p><p><strong>3. Local, not generic.</strong><br>Lighthouses, sailboats, sunshine and palm trees in stamp and badge formats tie the keepsake to this event and this city, which makes it something people want to keep and wear.</p></section>
-<div class="full"><div class="gal2"><figure class="figure"><img loading="lazy" src="../images/work/gathers/g1.jpg" alt="Four Narvar patch designs for the first pick." /></figure><figure class="figure"><img loading="lazy" src="../images/work/gathers/g2.jpg" alt="Seven San Diego city patches — stamps, badges and a script lockup." /></figure></div><div class=cap>Four Narvar patch designs for the first pick. Seven San Diego city patches — stamps, badges and a script lockup.</div></div>
-<section class="prose"><h2>Result</h2><p>A branded, interactive takeaway that turned a booth into a small craft moment: on-brand for Narvar and specific to San Diego.</p></section>
-<div class="prose">
+<div class="full reveal"><figure class="figure hero"><img src="../images/work/gathers/hero.jpg" alt="Gathers for Narvar — Event Merchandise" /></figure></div>
+<section class="prose reveal"><h2>The brief</h2><p>Narvar was at the Gathers event in San Diego and wanted something better than another branded giveaway that ends up in a drawer. The answer was a patch bar: guests build their own keepsake. It had to be clearly Narvar, feel specific to San Diego, and be simple enough to understand at a glance in a busy room.</p></section>
+<section class="prose reveal"><h2>What I did</h2><p>Designed four Narvar logo patches for the first pick. Designed seven San Diego city patches: stamps, a retro badge and a script lockup. Designed the patch bar signage that explains the two-step choice on one clear sign. Created the event branding around the experience.</p></section>
+<section class="prose reveal"><h2>Key decisions</h2><p><strong>1. Two steps, one sign.</strong><br>In a crowded room, nobody reads instructions. Splitting the choice into "pick your Narvar patch, then pick a San Diego patch" and putting both on one sign made it obvious in seconds.</p><p><strong>2. Brand first, place second.</strong><br>The Narvar patch always comes first and has a fixed spot (upper left sleeve), so every finished piece carries the brand. The city patch is the fun, personal part, placed anywhere the guest likes.</p><p><strong>3. Local, not generic.</strong><br>Lighthouses, sailboats, sunshine and palm trees in stamp and badge formats tie the keepsake to this event and this city, which makes it something people want to keep and wear.</p></section>
+<div class="full reveal"><div class="gal2"><figure class="figure"><img loading="lazy" src="../images/work/gathers/g1.jpg" alt="Four Narvar patch designs for the first pick." /></figure><figure class="figure"><img loading="lazy" src="../images/work/gathers/g2.jpg" alt="Seven San Diego city patches — stamps, badges and a script lockup." /></figure></div><div class=cap>Four Narvar patch designs for the first pick. Seven San Diego city patches — stamps, badges and a script lockup.</div></div>
+<section class="prose reveal"><h2>Result</h2><p>A branded, interactive takeaway that turned a booth into a small craft moment: on-brand for Narvar and specific to San Diego.</p></section>
+<div class="prose reveal">
   <h2>Deliverables</h2>
   <div class="delv"><span class="pill">Narvar Patches</span><span class="pill">San Diego Patches</span><span class="pill">Patch Bar Signage</span><span class="pill">Event Branding</span><span class="pill">On-site Experience</span></div>
   <a class="ext" href="https://www.figma.com/design/qP4EXsd2eEr5gu1nuJX0ZA/2025---Event---Gathers-SD-India" target="_blank" rel="noopener">View in Figma &rarr;</a>
 </div>
-<nav class="pagenav">
+<nav class="pagenav reveal">
   <a class="prev" href="coefficient.html"><div class="nl">&larr; Previous</div><div class="nt">Coefficient</div></a>
   <a class="next" href="semicab.html"><div class="nl">Next &rarr;</div><div class="nt">SemiCab</div></a>
 </nav>
@@ -121,5 +128,14 @@ footer{padding:1.5rem 2.5rem;border-top:.5px solid var(--border);display:flex;ju
   </div>
 </section>
 <footer><span>&copy; 2026 John Francis</span><span>Bangalore, India &nbsp;·&nbsp; <a href="mailto:johnfrancisa548@gmail.com" style="color:inherit;text-decoration:none">johnfrancisa548@gmail.com</a> &nbsp;·&nbsp; <a href="/John-Francis-Resume.pdf" target="_blank" rel="noopener" style="color:inherit;text-decoration:none">Resume</a> &nbsp;·&nbsp; <a href="https://www.linkedin.com/in/john-francis-amalanathan-18835847/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none">LinkedIn</a></span></footer>
+<script>
+(function(){var r=document.documentElement;
+if(!('IntersectionObserver' in window))return;
+if(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+r.classList.add('reveal-on');
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('is-visible');io.unobserve(e.target);}});},{rootMargin:'0px 0px -8% 0px',threshold:0.08});
+function start(){document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});}
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',start);else start();})();
+</script>
 </body>
 </html>
