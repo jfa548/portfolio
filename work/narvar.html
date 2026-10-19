@@ -3,8 +3,9 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Narvar — John Francis</title>
+<title>Narvar homepage redesign — John Francis, Senior Brand Designer</title>
 <meta name="description" content="Redesigning the homepage of a post-purchase platform used by 1,500+ of the world&#x27;s leading retail brands." />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 <meta property="og:title" content="Narvar — John Francis" />
 <meta property="og:description" content="Redesigning the homepage of a post-purchase platform used by 1,500+ of the world&#x27;s leading retail brands." />
 <meta property="og:image" content="https://jfa.design/images/work/narvar/hero.jpg" />
@@ -17,11 +18,14 @@
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet" />
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{--bg:#fff;--bg-2:#f5f4f2;--bg-3:#eeede9;--text:#111110;--text-2:#6b6a66;--text-3:#a09f9a;--border:rgba(0,0,0,.1);--border-2:rgba(0,0,0,.18);--radius:12px}
-@media (prefers-color-scheme:dark){:root{--bg:#111110;--bg-2:#1a1a18;--bg-3:#232320;--text:#f0efe9;--text-2:#8f8e89;--text-3:#5a5955;--border:rgba(255,255,255,.1);--border-2:rgba(255,255,255,.18)}}
+:root{--bg:#fff;--bg-2:#f5f4f2;--bg-3:#eeede9;--text:#111110;--text-2:#6b6a66;--text-3:#757470;--border:rgba(0,0,0,.1);--border-2:rgba(0,0,0,.18);--radius:12px}
+@media (prefers-color-scheme:dark){:root{--bg:#111110;--bg-2:#1a1a18;--bg-3:#232320;--text:#f0efe9;--text-2:#8f8e89;--text-3:#8b8a85;--border:rgba(255,255,255,.1);--border-2:rgba(255,255,255,.18)}}
 html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:0.01ms!important;animation-iteration-count:1!important;transition-duration:0.01ms!important}}
 body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+.wrap,.prose,.figure,.full,section,article,main{opacity:1!important;visibility:visible!important;transform:none!important}
 nav{display:flex;justify-content:space-between;align-items:center;padding:1.4rem 2.5rem;border-bottom:.5px solid var(--border);position:sticky;top:0;background:var(--bg);z-index:50;backdrop-filter:blur(12px)}
+@media (max-width:520px){nav{padding:1.2rem 1.5rem;flex-wrap:wrap;gap:.75rem}.nav-links{gap:1.2rem!important;order:3;width:100%;justify-content:flex-start}.nav-links a{font-size:12px!important}}
 .logo{font-family:'DM Serif Display',serif;font-size:19px;letter-spacing:-.4px;color:var(--text);text-decoration:none}
 .logo em{font-style:italic;color:var(--text-2)}
 .nav-links{display:flex;gap:2rem;list-style:none}
@@ -82,23 +86,25 @@ footer{padding:1.5rem 2.5rem;border-top:.5px solid var(--border);display:flex;ju
     <li><a href="/#work">Work</a></li>
     <li><a href="/#about">About</a></li>
     <li><a href="/#contact">Contact</a></li>
+    <li><a href="/John-Francis-Resume.pdf" target="_blank" rel="noopener">Resume</a></li>
+    <li><a href="https://www.linkedin.com/in/john-francis-amalanathan-18835847/" target="_blank" rel="noopener">LinkedIn</a></li>
   </ul>
 </nav>
 <div class="wrap">
   <a href="/#work" class="back">&larr; All work</a>
   <div class="ch-eyebrow">Ecommerce · Website Redesign</div>
   <h1 class="ch-title">Narvar</h1>
-  <p class="ch-sub">Redesigning the homepage of a post-purchase platform used by 1,500+ of the world&#x27;s leading retail brands.</p>
+  <p class="ch-sub">Turning a sprawling, multi-product story into a homepage that enterprise retail buyers can scan in seconds.</p>
   <div class="ch-meta"><div><div class="ml">Role</div><div class="mv">Senior Designer</div></div><div><div class="ml">Client</div><div class="mv">Narvar</div></div><div><div class="ml">Year</div><div class="mv">2024–25</div></div><div><div class="ml">Type</div><div class="mv">Website Redesign</div></div></div>
-  <div class="glance"><div><div class="gv">Full homepage</div><div class="gl">end-to-end redesign</div></div><div><div class="gv">Enterprise B2B</div><div class="gl">post-purchase SaaS</div></div><div><div class="gv">Hero &rarr; proof</div><div class="gl">narrative flow</div></div></div>
+  <div class="glance"><div><div class="gv">Full homepage</div><div class="gl">end-to-end redesign</div></div><div><div class="gv">Build-ready system</div><div class="gl">handed off in Figma</div></div><div><div class="gv">1,500+ retail brands</div><div class="gl">the audience</div></div></div>
 </div>
-<div class="full"><figure class="figure hero"><img src="../images/work/narvar/hero.jpg" alt="Narvar — Website Redesign" /></figure></div>
-<section class="prose"><h2>Overview</h2><p>Narvar powers the post-purchase experience — tracking, returns, and personalisation — for more than 1,500 retail brands. The homepage had to carry a lot at once: explain an AI-driven platform, prove scale, and convince enterprise buyers, all above the fold. I redesigned it as a single, confident narrative that moves from promise to proof.</p></section>
-<section class="prose"><h2>The challenge</h2><p>The story was broad and technical. Narvar touches personalisation, fraud prevention, reverse logistics and more, and every team wanted its message near the top. The risk was a homepage that said everything and landed nothing — a wall of features with no hierarchy. The job was to sequence the message so a buyer could scan it in seconds and still feel the depth underneath.</p></section>
-<section class="prose"><h2>Approach</h2><p>I built the page around a dark, enterprise-grade system: a cinematic hero with a single clear promise, a radial diagram that visualises the whole platform as one network rather than a list, a logo wall for instant credibility, and a proof section that leads with hard numbers and retailer stories. Type, spacing and a restrained accent palette keep every section unmistakably Narvar.</p></section>
-<section class="prose"><h2>The full homepage</h2><p>Here it is end to end — the AI-led hero and radial platform diagram, the retail logo wall, the &ldquo;reward loyalty, reduce risk&rdquo; value grid, the network stats, the retailer proof wall, enterprise-grade security, press coverage and the closing call to action — one continuous, build-ready flow.</p></section>
-<div class="full"><figure class="figure"><img loading="lazy" src="../images/work/narvar/homepage.jpg" alt="The full Narvar homepage, top to bottom." /></figure><div class=cap>The complete homepage redesign, top to bottom.</div></div>
-<section class="prose"><h2>Outcome</h2><p>The result is a build-ready homepage system — hero, platform diagram, stats module and testimonials grid — with a consistent visual language that scales across the rest of the marketing site. It gives a complex, multi-product story a clear reading order and an enterprise feel that matches the brand&#x27;s standing.</p></section>
+<div class="full"><figure class="figure hero"><img src="../images/work/narvar/hero.jpg" alt="Narvar homepage redesign showcasing dark, enterprise-grade interface with AI-driven platform visualization and retail brand logos" /></figure></div>
+<section class="prose"><h2>The brief</h2><p>Narvar runs the post-purchase experience (tracking, returns, personalisation) for 1,500+ retail brands. The homepage had to explain an AI-driven platform, prove its scale and win over enterprise buyers, all at once. Every team wanted its product near the top. Without a clear order, the page would say everything and land nothing.</p></section>
+<section class="prose"><h2>What I did</h2><p>Redesigned the full homepage end to end, from hero to closing call to action. Set up the page's dark, enterprise-grade visual system: type, spacing and a restrained accent palette. Designed the cinematic AI-led hero, the radial platform diagram, the retail logo wall, the "reward loyalty, reduce risk" value grid, the network stats, the retailer proof wall, the security and press sections, and the closing CTA. Delivered it as a build-ready, responsive system with a reusable hero, platform diagram, stats module and testimonials grid.</p></section>
+<section class="prose"><h2>Key decisions</h2><p><strong>1. One promise in the hero, not a feature list.</strong><br>Buyers decide in seconds whether to keep scrolling. A single, clear promise above the fold gives them a reason to, and pushes the detail into the sections below.</p><p><strong>2. The platform as a network, not a list.</strong><br>Narvar's products (personalisation, fraud prevention, reverse logistics and more) read as clutter when they're stacked. A radial diagram shows them as one connected platform, so the breadth looks like strength instead of noise.</p><p><strong>3. Credibility first, then hard proof.</strong><br>The logo wall sits right under the hero so trust is earned straight away. The page then moves into numbers and retailer stories, taking buyers from promise to proof in a fixed reading order.</p></section>
+<section class="prose"><h2>The full homepage</h2><p>Here it is end to end — the AI-led hero and radial platform diagram, the retail logo wall, the "reward loyalty, reduce risk" value grid, the network stats, the retailer proof wall, enterprise-grade security, press coverage and the closing call to action — one continuous, build-ready flow.</p></section>
+<div class="full"><figure class="figure"><img loading="lazy" src="../images/work/narvar/homepage.jpg" alt="The full Narvar homepage, top to bottom." /></figure><div class=cap>The complete homepage redesign, top to bottom. <em>Note:</em> The 60% / 25% / 89% (and 1,000+, 42 billion, 90%) figures shown in the mockup are Narvar's own platform statistics, not results of this project.</div></div>
+<section class="prose"><h2>Result</h2><p>The homepage now has a clear reading order and an enterprise feel that matches Narvar's standing. Its components and visual language scale across the rest of the marketing site.</p></section>
 <div class="prose">
   <h2>Deliverables</h2>
   <div class="delv"><span class="pill">Homepage Design</span><span class="pill">Hero &amp; Platform Diagram</span><span class="pill">Stats Module</span><span class="pill">Testimonials Grid</span><span class="pill">Responsive Layout</span></div>
@@ -108,6 +114,13 @@ footer{padding:1.5rem 2.5rem;border-top:.5px solid var(--border);display:flex;ju
   <a class="prev" href="nile.html"><div class="nl">&larr; Previous</div><div class="nt">Nile Secure</div></a>
   <a class="next" href="insider.html"><div class="nl">Next &rarr;</div><div class="nt">Insider</div></a>
 </nav>
-<footer><span>&copy; 2026 John Francis</span><span>jfa.design</span></footer>
+<section style="padding:3rem 2.5rem 2rem;border-top:.5px solid var(--border);max-width:1000px;margin:0 auto">
+  <div style="max-width:680px;margin:0 auto;text-align:center">
+    <h2 style="font-family:'DM Serif Display',serif;font-size:28px;font-weight:400;letter-spacing:-.5px;margin-bottom:.8rem">Let's work together</h2>
+    <p style="font-size:14px;color:var(--text-2);margin-bottom:1.5rem">Open to opportunities — full-time, freelance and fractional work.</p>
+    <a href="mailto:johnfrancisa548@gmail.com" style="font-family:'DM Sans',sans-serif;font-size:14px;font-weight:500;padding:12px 28px;background:var(--text);color:var(--bg);border:none;border-radius:999px;text-decoration:none;display:inline-block;transition:opacity .2s">Get in touch &rarr;</a>
+  </div>
+</section>
+<footer><span>&copy; 2026 John Francis</span><span>Bangalore, India &nbsp;·&nbsp; <a href="mailto:johnfrancisa548@gmail.com" style="color:inherit;text-decoration:none">johnfrancisa548@gmail.com</a> &nbsp;·&nbsp; <a href="/John-Francis-Resume.pdf" target="_blank" rel="noopener" style="color:inherit;text-decoration:none">Resume</a> &nbsp;·&nbsp; <a href="https://www.linkedin.com/in/john-francis-amalanathan-18835847/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none">LinkedIn</a></span></footer>
 </body>
 </html>
