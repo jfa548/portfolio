@@ -20,7 +20,9 @@
 :root{--bg:#fff;--bg-2:#f5f4f2;--bg-3:#eeede9;--text:#111110;--text-2:#6b6a66;--text-3:#a09f9a;--border:rgba(0,0,0,.1);--border-2:rgba(0,0,0,.18);--radius:12px}
 @media (prefers-color-scheme:dark){:root{--bg:#111110;--bg-2:#1a1a18;--bg-3:#232320;--text:#f0efe9;--text-2:#8f8e89;--text-3:#5a5955;--border:rgba(255,255,255,.1);--border-2:rgba(255,255,255,.18)}}
 html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:0.01ms!important;animation-iteration-count:1!important;transition-duration:0.01ms!important}}
 body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+.wrap,.prose,.figure,.full,section,article,main{opacity:1!important;visibility:visible!important;transform:none!important}
 nav{display:flex;justify-content:space-between;align-items:center;padding:1.4rem 2.5rem;border-bottom:.5px solid var(--border);position:sticky;top:0;background:var(--bg);z-index:50;backdrop-filter:blur(12px)}
 .logo{font-family:'DM Serif Display',serif;font-size:19px;letter-spacing:-.4px;color:var(--text);text-decoration:none}
 .logo em{font-style:italic;color:var(--text-2)}

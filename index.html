@@ -151,6 +151,31 @@
 
     @media (prefers-reduced-motion: reduce) {
       .hv { animation: none !important; }
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+
+    /* Ensure all content is visible by default - no scroll-reveal hiding */
+    .hero, .hero-text, .hero-visual,
+    .clients, .section-header, .grid, .card,
+    .about, .contact, footer,
+    section, article, main {
+      opacity: 1 !important;
+      visibility: visible !important;
+      transform: none !important;
+    }
+
+    /* Work grid cards must always be visible */
+    .card, .card-img, .card-overlay {
+      will-change: auto;
+    }
+
+    /* Speed up any remaining transitions */
+    * {
+      transition-duration: 0.15s;
     }
 
     .hero-eyebrow {
